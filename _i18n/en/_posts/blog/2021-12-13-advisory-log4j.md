@@ -117,6 +117,7 @@ to ask security questions or report security issues.
     - Mention that lookups are done via JNDI to better connect to other descriptions.
     - Mention that the java parameter is only available on log4j2 >= 2.10, which covers the SCS Elasticsearch.
     - Mention fixed version be better 2.16+.
+    - Add version history.
 
 * Initial release on 2021-12-13, 18:30 CET.
 
