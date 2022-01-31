@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://scs.community/feed/security.xml" rel="self" type="application/atom+xml" /><link href="https://scs.community/" rel="alternate" type="text/html" hreflang="de" /><updated>2022-01-31T10:11:09+00:00</updated><id>https://scs.community/feed/security.xml</id><title type="html">Sovereign Cloud Stack | Security</title><subtitle>Sovereign Cloud Stack (SCS) is a network of existing and future providers of standardized sovereign cloud and container infrastructure to join forces in defining, implementing and operating a fully open, federated, compatible platform. By joining forces, the platform can support a healthy ecosystem for service and application developers and strengthen the digitalization efforts in Europe without creating large risks to lose control over the technology and the data.</subtitle><entry><title type="html">Sovereign Cloud Stack Security Advisory log4j</title><link href="https://scs.community/security/2021/12/13/advisory-log4j/" rel="alternate" type="text/html" title="Sovereign Cloud Stack Security Advisory log4j" /><published>2021-12-13T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/security/2021/12/13/advisory-log4j</id><content type="html" xml:base="https://scs.community/security/2021/12/13/advisory-log4j/"><![CDATA[<p><em>(By Christian Berendt, Kurt Garloff, Felix Kronlage-Dammers)</em></p>
+
+<h2 id="the-vulnerability">The vulnerability</h2>
+
+<p>On Fri, 2021-12-10, a design issue in the very popular Java library log4j
+was reported and assigned <a href="https://www.lunasec.io/docs/blog/log4j-zero-day/">CVE-2021-44228</a>
+with a CVSS score of 10, which is the highest
+possible score and thus means that this is a very critical vulnerability.
+In short, log4j interprets strings that are being submitted to it
+causing lookups via the JNDI interface (intended e.g. to do LDAP name resolution).
+If attackers can cause log4j to log attacker controlled strings, these can be used
+to trigger these lookups and cause arbitrary java code to be loaded and
+executed. This can be used to gain access to the
+application that uses log4j and the container/VM that the application
+is running in. As log4j is so popular, many Java applications are
+affected. At this point in time, all log4j versions prior to
+log4j2-2.15(-rc2) are affected.</p>
+
+<p>Our German readers might want to read the excellent summary in the
+<a href="https://www.bsi.bund.de/SharedDocs/Cybersicherheitswarnungen/DE/2021/2021-549032-10F2.pdf?__blob=publicationFile&amp;v=3">BSI advisory</a>.</p>
+
+<h2 id="usage-of-log4j-in-scs">Usage of log4j in SCS</h2>
+
+<p>The main components of Sovereign Cloud Stack do not use Java.
+However, there are Java tools used at a few places:</p>
+
+<ol>
+  <li>Keycloak (Identity broker)</li>
+  <li>Nexus (Mirror manager)</li>
+  <li>Elasticsearch (Log analysis tool)</li>
+</ol>
+
+<p>Neither <a href="https://github.com/keycloak/keycloak/discussions/9078">keycloak</a>
+nor nexus are affected by the log4j vulnerability.</p>
+
+<p>However, Elasticsearch does use log4j. Elasticsearch is rolled out in a
+container on the SCS compute nodes by default in SCS deployments to allow for
+log analysis.</p>
+
+<h2 id="potential-impact">Potential impact</h2>
+
+<p>Normal users do not interact with the Elasticsearch functionality in SCS;
+only operators have access to it. An issue that can be abused by operators
+is not a serious threat to SCS environments, as in all practical setups,
+the operators have more privileges to affect the environment than they
+could gain by exploiting vulnerabilities in Elasticsearch. This might only
+be different in environments with very large operational teams and a very
+fine-grained operational access role model.</p>
+
+<p>However, we can at this point not exclude the possibility that a name
+controlled by the user (such as the name from a resource at OpenStack
+or Kubernetes level) gets logged and later on processed by ElasticSearch
+and logged again via log4j. If so, a user could cause undesired actions
+within the ElasticSearch container. If a potential
+attacker could in addition find another exploit to escape the container
+confinement, he could take over the SCS deployment.</p>
+
+<h2 id="mitigation-and-fix">Mitigation and fix</h2>
+
+<p>Until a new version of the Elasticsearch container that uses a fixed
+log4j is available, we recommend applying the following change:</p>
+
+<ol>
+  <li>
+    <p>Change the configuration repository.
+In <code class="language-plaintext highlighter-rouge">environments/kolla/configuration.yml</code>, add <code class="language-plaintext highlighter-rouge">-Dlog4j2.formatMsgNoLookups=true</code> to the JVM
+startup paramters:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   es_java_opts: "-Dlog4j2.formatMsgNoLookups=true {% if es_heap_size %}-Xms{{ es_heap_size }} -Xmx{{ es_heap_size }}{%endif%}"
+
+</code></pre></div>    </div>
+  </li>
+  <li>Roll out the changes:
+    <ul>
+      <li>If you are <em>not</em> using Celery:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  osism-manager configuration
+</code></pre></div>        </div>
+      </li>
+      <li>If you are using Celery:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  osism apply configuration
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>(Re)deploy Elasticsearch:
+    <ul>
+      <li>If you are <em>not</em> using Celery:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  osism-kolla deploy elastisearch
+</code></pre></div>        </div>
+      </li>
+      <li>If you are using Celery:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  osism apply elasticsearch
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>This causes log4j to no longer interpret the input in ways that lookups
+can be triggered and thus reliably avoids the vulnerability. Please note that
+this setting <code class="language-plaintext highlighter-rouge">log4j2.formatMsgNoLookups</code> is only available in
+log4j2 &gt;= 2.10.0, which is fortunately the case in the Elasticsearch container.</p>
+
+<p>When a new Elasticsearch container built with the fixed log4j (2.16 or better 2.17+)
+becomes available, we’ll issue a new advisory that describes the deployment of the
+new container.</p>
+
+<h2 id="update-2021-12-21-fix-still-valid">Update 2021-12-21: Fix still valid</h2>
+
+<p>Meanwhile, two more security issues around log4j have been reported:
+<a href="https://www.whitesourcesoftware.com/resources/blog/log4j-vulnerability-cve-2021-45046/">CVE-2021-45046</a>
+and <a href="https://www.whitesourcesoftware.com/resources/blog/log4j-vulnerability-cve-2021-45105/">CVE-2021-45105</a>.
+The former is a context lookup vulnerability (as a variation to the JNDI
+lookup vulnerability) while the latter is a Denial of Service attack by
+causing an infinite recursion on the context lookup.</p>
+
+<p>The recommended setting <code class="language-plaintext highlighter-rouge">log4j2.formatMsgNoLookups=true</code>
+is still fully mitigating the issues in our environment.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">es_java_opts</code> setting has been configured in the upstream
+<a href="https://github.com/osism/ansible-defaults">OSISM/ansible_defaults</a>
+repository meanwhile (commit c84f87a6106dd53d08447ac7d5a24b2677da38f0),
+so fresh deployments of SCS testbeds or production environments get
+the mitigation automatically. You can validate this by logging in to
+one of your compute nodes and checking the jvm parameters in the process
+list (elastic search container). You should find <code class="language-plaintext highlighter-rouge">-Dlog4j2.formatMsgNoLookups=true</code>
+in the parameter list.</p>
+
+<h2 id="sovereign-cloud-stack-security-contact">Sovereign Cloud Stack Security Contact</h2>
+
+<p>Please contact the SCS project management team at
+<a href="mailto:project@scs.sovereignit.de">project at scs dot sovereignit dot de </a>
+to ask security questions or report security issues.</p>
+
+<h2 id="version-history">Version history</h2>
+
+<ul>
+  <li>Minor update on 2021-12-21, 17:45 CET:
+    <ul>
+      <li>Information on new CVEs and workaround still being effective.</li>
+      <li>Update recommended log4j version to 2.17+.</li>
+      <li>Mention the implementation and validation in testbed.</li>
+    </ul>
+  </li>
+  <li>Minor update on 2021-12-14, 15:45 CET:
+    <ul>
+      <li>Remove wrong space in <code class="language-plaintext highlighter-rouge">osism apply elasticsearch</code></li>
+      <li>Elsasticsearch is deployed on the compute hosts in typical setups, not the manager node.</li>
+      <li>Mention that lookups are done via JNDI to better connect to other descriptions.</li>
+      <li>Mention that the java parameter is only available on log4j2 &gt;= 2.10, which covers the SCS Elasticsearch.</li>
+      <li>Mention fixed version be better 2.16+.</li>
+    </ul>
+  </li>
+  <li>Initial release on 2021-12-13, 18:30 CET.</li>
+</ul>]]></content><author><name>Kurt Garloff</name></author><category term="security" /><summary type="html"><![CDATA[(By Christian Berendt, Kurt Garloff, Felix Kronlage-Dammers)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/default-card.jpg" /><media:content medium="image" url="https://scs.community/assets/images/default-card.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://scs.community/feed/release.xml" rel="self" type="application/atom+xml" /><link href="https://scs.community/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-01-31T10:11:08+00:00</updated><id>https://scs.community/feed/release.xml</id><title type="html">Sovereign Cloud Stack | Release</title><subtitle>Sovereign Cloud Stack (SCS) is a network of existing and future providers of standardized sovereign cloud and container infrastructure to join forces in defining, implementing and operating a fully open, federated, compatible platform. By joining forces, the platform can support a healthy ecosystem for service and application developers and strengthen the digitalization efforts in Europe without creating large risks to lose control over the technology and the data.</subtitle><entry><title type="html">SCS R1 released</title><link href="https://scs.community/release/2021/10/05/release1/" rel="alternate" type="text/html" title="SCS R1 released" /><published>2021-10-05T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/release/2021/10/05/release1</id><content type="html" xml:base="https://scs.community/release/2021/10/05/release1/"><![CDATA[<p>After R0 has been released in July and focused on the installation of a <a href="https://docs.osism.tech/testbed/">test environment</a>, the release R1 of Sovereign Cloud Stack was released last Wednesday, 2021-09-29.</p>
+
+<p>The newest release R1 includes the <a href="https://releases.openstack.org/wallaby/">OpenStack Wallaby Release</a>, <a href="https://github.com/kubernetes/kubernetes/releases">Kubernetes version v1.21.x</a>, and the <a href="https://github.com/kubernetes-sigs/cluster-api/releases">Kubernetes Cluster API version v0.4</a>.</p>
+
+<p>The <a href="https://github.com/SovereignCloudStack/Docs/blob/main/Release-Notes/Release1.md">full release notes</a> including technical details can be found in the <a href="https://github.com/SovereignCloudStack/Docs">central docs repository</a> of the SCS project on GitHub.</p>
+
+<h2 id="kubernetes-cluster-as-self-service-thanks-to-cluster-api">Kubernetes cluster as self-service thanks to cluster API</h2>
+
+<p>A special focus during this sprint was on the management of Kubernetes containers based on the k8s Cluster API, which was integrated in version Alpha 4. Both through the conformance tests of the <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> using <a href="https://sonobuoy.io/">sonobouy</a>, and in real-world use during the <a href="https://www.gaia-x.eu/news/gaia-x-hackathon-1-new-technology-develops-live-today-and-tomorrow">first Gaia-X Hackathon</a> on August 30 and 31, 2021, the maturity of SCS’s k8s cluster management was tested and determined for productive systems.</p>
+
+<figure class="figure mx-auto d-block" style="width:90%">
+  <a href="/assets/images/release1/screenshot-capi-provisioning-k9s.png">
+    <img src="/assets/images/release1/screenshot-capi-provisioning-k9s.png" class="figure-img w-100" />
+  </a>
+    <figcaption class="figure-caption">
+    Kubernetes cluster can be deployed on-the-fly through the k8s cluster API.
+  </figcaption>
+</figure>
+
+<p>With the Kubernetes Cluster API, DevOps teams can create and manage Kubernetes clusters for development, for test and staging, and for production environments on-thy-fly. Of course, the cloud operator can also offer a managed service to its users via the same technology. Detailed <a href="https://github.com/SovereignCloudStack/k8s-cluster-api-provider/blob/master/Release-Notes-R1.md">release information on SCS’s k8s-cluster-api-provider</a> can be found in the <a href="https://github.com/SovereignCloudStack/k8s-cluster-api-provider">corresponding repository</a>.</p>
+
+<h2 id="sovereign-operation-through-monitoring-and-logging">Sovereign operation through monitoring and logging</h2>
+
+<p>The Sovereign Cloud Stack project’s Monitoring Special Interest Group has collected <a href="https://github.com/osism/kolla-operations">various examples of monitoring SCS environments</a>. The blueprints for Prometheus exporter, rules and Grafana dashboards can be used by providers after appropriate customization to ensure low-threshold, high-quality operation of their own SCS platform.</p>
+
+<figure class="figure mx-auto d-block" style="width:90%">
+  <a href="/assets/images/release1/screenshot-ceph-dashboard.png">
+    <img src="/assets/images/release1/screenshot-ceph-dashboard.png" class="figure-img w-100" />
+  </a>
+    <figcaption class="figure-caption">
+    With R1, easy-to-use dashboards are available.
+  </figcaption>
+</figure>
+
+<p>For the upcoming release, we plan to integrate these blueprints directly into the testbed deployment and also make them available to the OpenStack upstream community. We particularly welcome feedback on the examples integrated in release R1 and, in addition, suggestions on other essential operational tools.</p>
+
+<p>With the current version of OSISM in release R1, centralized logging is now also enabled by default. The logging rules still have to be adapted by the provider according to his environment. Similar to monitoring, we also plan to publish already tested rules in the area of logging as a blueprint with the upcoming releases.</p>
+
+<h2 id="a-federated-and-secure-data-platform">A federated and secure data platform</h2>
+
+<p>Authentication against Horizon, the OpenStack standard web interface for using an SCS Cloud, can additionally be realized with <a href="https://openid.net/connect/">OpenID Connect</a> via the integrated identity and access management solution Keycloak. This enables federation across multiple cloud service providers, in line with the vision of Gaia-X.</p>
+
+<p>For the following release R2, we plan to work further on the high availability of the IAM service, which could not be fully tested at the time of the release in its current implementation based on Galera Cluster.</p>
+
+<h2 id="automated-distribution-on-bare-metal">Automated distribution on bare metal</h2>
+
+<p>For automated distribution of the Sovereign Cloud stack on physical hardware, the <a href="https://ironicbaremetal.org/">ironic</a> service can be installed using OSISM. To enable prior testing of the automated deployment, a virtual BMC service has been integrated, so that bare metal deployments can also be tested in the testbed. The main building blocks are already available upstream, but were not fully integrated into R1 due to the short timing of the release.</p>
+
+<h2 id="further-announcements-about-the-project">Further announcements about the project</h2>
+
+<p>Following the successful engagement of the SCS community in the first Gaia-X Hackathon, concrete plans are already being made for the second Hackathon on December 2 and 3, 2021. This will feature a dedicated two-day session in which a fully sovereign cloud will be built from scratch. Interested cloud architects are invited to join us in installing and running SCS hands-on on real hardware.</p>
+
+<p><img src="/assets/images/logo-greencis.png" class="float-left" alt="GREEN-CIS" style="width:300px;" /></p>
+
+<p>In addition, as part of the “Important Project of Common European Interest - Cloud Infrastructure and Services” (IPCEI-CIS), the SCS project is actively participating in the so-called GREEN-CIS consortium, short for “General Purpose Resilient and Secure Energy Efficient Computing Infrastructure Network”. This growing alliance of a total of 28 industry and research partners has set itself the goal of developing and building a virtual, sustainable cloud edge system operating as a single entity based on a decentralized, multi-provider ecosystem. In this regard, we are pleased to receive positive feedback from the German Federal Ministry for Economic Affairs and Energy, which will send the GREEN-CIS consortium together with 21 other projects to the European matchmaking event on October 06, 2021.</p>
+
+<p>The Sovereign Cloud Stack project will play a central role as an open and sovereign cloud technology and will serve as the basis for further platform services as well as for a modern edge cloud.</p>]]></content><author><name>Sovereign Cloud Stack</name></author><category term="release" /><summary type="html"><![CDATA[After R0 has been released in July and focused on the installation of a test environment, the release R1 of Sovereign Cloud Stack was released last Wednesday, 2021-09-29.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/default-card.jpg" /><media:content medium="image" url="https://scs.community/assets/images/default-card.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SCS R0 released</title><link href="https://scs.community/release/2021/07/15/release0/" rel="alternate" type="text/html" title="SCS R0 released" /><published>2021-07-15T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/release/2021/07/15/release0</id><content type="html" xml:base="https://scs.community/release/2021/07/15/release0/"><![CDATA[<p>With great pleasure, we announce the Release 0 of Sovereign Cloud Stack.</p>
+
+<p>While we officially only got the funding for our project a few days ago, we
+have already been able to do very useful work with the community that we were
+able to set up and which engaged in collaboratively developing software.</p>
+
+<p>R0 is the culmination of more than a year of work, all of which can be found on
+github. <a href="https://github.com/SovereignCloudStack/">SCS</a> heavily relies on
+<a href="https://github.com/OSISM/">OSISM</a>, so we actually are building on top of
+many years of work there. A lot of the SCS work got integrated back into it.
+SCS and OSISM of course build on top of thousands of person years
+of upstream communities’ work. We are standing on the shoulders of giants.</p>
+
+<p>We are really proud with what we achieved with our volunteer community!  The
+automation for the lifecycle management of the (containerized) base
+infrastructure, the operations tooling, IAM and the IaaS layer is rock solid.
+The first two partners, <a href="https://betacloud.de">betacloud</a> and
+<a href="https://www.plusserver.com/en/products/pluscloud">PlusServer</a> are already
+using this for their productive clouds and more are in the pipeline.
+We have been monitoring the demonstrator (gx-scs) environment from PlusCloudOpen
+with <a href="https://github.com/SovereignCloudStack/openstack-health-monitor">openstack-health-monitor</a>
+and have seen only one slowliness warning in weeks and not a single alarm.
+This is no small feat.</p>
+
+<p>Thanks to anyone who contributed to this nice release!</p>
+
+<p>R0 focuses on <a href="https://docs.osism.tech/testbed/">testbed</a> deployments – we
+want to make it easy for anyone to use SCS for testing, inspection,
+contribution, comparison, inspiration, … at this stage. This in no way should
+discourage anyone from a production deployment on bare metal – as mentioned we
+have two cloud providers already using it. Exploring testbed is typically the
+first stage though. Get in touch with us if you have made yourself familiar
+with SCS via testbed already and want to move to the next stage.</p>
+
+<p>We have updated a lot of documents in the last days. Use our
+<a href="https://github.com/SovereignCloudStack/Docs/">github Docs</a> as entry point.
+There are specific
+<a href="https://github.com/SovereignCloudStack/Docs/blob/main/Release-Notes/Release0.md">release notes for R0</a>.
+You can of course also find this from the <a href="/get">“Get SCS”</a>
+page from our <a href="">web site</a>.</p>
+
+<p>The documents explain how to perform a testbed installation and also how to use
+the Technical Preview pieces such as the Kubernetes aaS pieces using the
+<a href="https://github.com/SovereignCloudStack/k8s-cluster-api-provider">k8s-cluster-api</a>.
+This will be one of the focus areas for R1 which we already
+plan for September. (Note: We’ll have a 6 month release cycle going forward,
+though the reality is more continuous than this sounds.)</p>
+
+<p>Let us know if you have questions or feedback. We like github issues and PRs,
+but will try to followup on <a href="mailto:project@scs.sovereignit.de">email</a> as well.</p>]]></content><author><name>Sovereign Cloud Stack</name></author><category term="release" /><summary type="html"><![CDATA[With great pleasure, we announce the Release 0 of Sovereign Cloud Stack.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/default-card.jpg" /><media:content medium="image" url="https://scs.community/assets/images/default-card.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

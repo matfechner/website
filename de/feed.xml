@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://scs.community/feed.xml" rel="self" type="application/atom+xml" /><link href="https://scs.community/" rel="alternate" type="text/html" hreflang="de" /><updated>2022-01-31T10:11:09+00:00</updated><id>https://scs.community/feed.xml</id><title type="html">Sovereign Cloud Stack</title><subtitle>Sovereign Cloud Stack (SCS) is a network of existing and future providers of standardized sovereign cloud and container infrastructure to join forces in defining, implementing and operating a fully open, federated, compatible platform. By joining forces, the platform can support a healthy ecosystem for service and application developers and strengthen the digitalization efforts in Europe without creating large risks to lose control over the technology and the data.</subtitle><entry><title type="html">Rückblick auf ein erfolgreiches Jahr: Sovereign Cloud Stack Community Summit 2021</title><link href="https://scs.community/2021/12/20/summit2021/" rel="alternate" type="text/html" title="Rückblick auf ein erfolgreiches Jahr: Sovereign Cloud Stack Community Summit 2021" /><published>2021-12-20T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/2021/12/20/summit2021</id><content type="html" xml:base="https://scs.community/2021/12/20/summit2021/"><![CDATA[<p>Liebe Community,</p>
+
+<p>wir danken euch vom ganzen Herzen für eure Teilnahme an unserem diesjährigen — und gleichzeitig ersten — <a href="https://eventyay.com/e/cf85f6e7">SCS Community Summit am 15. Dezember 2021</a>. Auch wenn wir uns ursprünglich sehr darauf gefreut haben euch alle persönlich auf der Cloud Expo in Frankfurt zu treffen und gemeinsam vor Ort anzustoßen, hat uns die aktuelle Pandemiesituation zu einem alternativen Format gezwungen. Ganz getreu dem Motto <em>8-Bit Retro Edition</em> fand das das diesjährige Communitytreffen im eigens geschaffenen <a href="https://github.com/SovereignCloudStack/scs-maschinenraum">SCS Maschinenraum</a> statt und bot virtuellen Raum für Vorträge, Diskussionen und Gespräche. Um trotzdem ein wenig Kongressfeeling aufkommen zu lassen, haben wir im Vorfeld kurzerhand einen Stickerexchange organisiert, so dass alle Teilnehmerinnen und Teilnehmer ein <em>Adventure Package</em> zugeschickt bekamen. Vielen Dank für eure Zusendungen und Unterstützung der Aktion!</p>
+
+<figure class="figure mx-auto d-block" style="width:70%">
+  <a href="/assets/images/summit2021/sticker-exchange-2021.jpg">
+    <img src="/assets/images/summit2021/sticker-exchange-2021.jpg" class="figure-img w-100" />
+  </a>
+</figure>
+
+<p>Den Anfang machten <a href="https://www.linkedin.com/in/stephan-ilaender-128b365/">Stephan Ilaender</a> und <a href="https://www.linkedin.com/in/felix-kronlage-dammers-9378a6184/">Felix Kronlage-Dammers</a> mit zwei Impulsvorträgen aus der Community. Die Folien zu den Vorträgen haben wir euch am Ende dieses Beitrags zusammengestellt.</p>
+
+<div class="row">
+    <div class="col">
+        <figure class="figure mx-auto d-block" style="width:70%">
+            <a href="/assets/images/summit2021/screenshot-stephan.png">
+                <img src="/assets/images/summit2021/screenshot-stephan.png" class="figure-img w-100" />
+            </a>
+        </figure>
+     </div>
+    <div class="col">
+        <figure class="figure mx-auto d-block" style="width:70%">
+            <a href="/assets/images/summit2021/screenshot-fkr.png">
+                <img src="/assets/images/summit2021/screenshot-fkr.png" class="figure-img w-100" />
+            </a>
+        </figure>
+    </div>
+</div>
+
+<p>Im Anschluss gaben <a href="/garloff">Kurt Garloff</a>, <a href="/urban">Manuela Urban</a>, <a href="/lossack">Dirk Loßack</a> und <a href="/itrich">Eduard Itrich</a> einen Überblick über das vergangene Jahr SCS, präsentierten einen Reiseführer in die Sovereign Cloud Stack Community sowie eine Übersicht über vergangene und anstehende Vergaben des Projektes. Auch diese Folien stellen wir euch am Ende dieses Beitrags gebündelt zur Verfügung.</p>
+
+<h2 id="meilensteine-für-2022">Meilensteine für 2022</h2>
+
+<p>Arbeitsintensiv für alle wurde dann die zweite Hälfte des Vormittags: Gemeinsam haben wir eure Ideen und Impulse für das kommende Jahr auf einem <a href="https://github.com/aliasaria/scrumblr">scrumblr</a> Board gesammelt und diskutiert. Diese werden wir nun zusammen mit dem Product Board in den kommenden Wochen aufbereiten und in das <a href="https://ms.scs.sovereignit.de/wekan/b/Zi4PKHTuEhugB7bkX/release-planing-r2">öffentliche Wekan Board</a> des Projektes überführen. Wir freuen uns bereits darauf diese Meilensteine schon bald mit euch anpacken zu dürfen!</p>
+
+<figure class="figure mx-auto d-block" style="width:100%">
+  <a href="/assets/images/summit2021/scrumblr-goals-2022.png">
+    <img src="/assets/images/summit2021/scrumblr-goals-2022.png" class="figure-img w-100" />
+  </a>
+</figure>
+
+<h2 id="retrospektive-und-state-of-the-community-2021">Retrospektive und State of the Community 2021</h2>
+
+<p>Der Nachmittag wurde mit der Vorstellung der Resultate aus der vergangenen Retrospektive sowie den Ergebnissen der Communityumfrage <em>State of the Community 2021</em> eingeläutet.</p>
+
+<link rel="stylesheet" href="/assets/vendor/apexcharts/apexcharts.css" />
+
+<script src="/assets/vendor/apexcharts/apexcharts.js"></script>
+
+<div id="chart-monday" style="min-height: 365px;"></div>
+<div id="chart-thursday" style="min-height: 365px;"></div>
+<div id="chart-community" style="min-height: 365px;"></div>
+<div id="chart-activity" style="min-height: 365px;"></div>
+
+<script>
+  var options = {
+    chart: {
+      type: 'boxPlot',
+      height: 350
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true
+      },
+      boxPlot: {
+        colors: {
+          upper: '#0d6efd',
+          lower: '#50c3a5'
+        }
+      }
+    },
+    grid: {
+      xaxis: {
+        lines: {
+          show: true
+        }
+      }
+    },
+    yaxis: {
+      min: 0,
+      max: 10
+    },
+    xaxis: {
+      crosshairs: {
+        show: false
+      }
+    },
+    tooltip:{
+      x: {
+        show: false
+      }
+    }
+  }
+
+  options.title = {text: 'Monday Team Meetings'};
+  options.subtitle = {text: 'On a scale from 1 (worst) to 10 (best), how would you rate...'};
+  options.series = [
+    {
+      data: [
+        {
+          x: ['...the overall', 'effectiveness?'],
+          y: [4, 4.5, 7, 7.5, 8]
+        },
+        {
+          x: ['... your', 'comfortableness?'],
+          y: [4, 7, 8, 9.5, 10]
+        },
+        {
+          x: ['... the contribution', 'opportunities?'],
+          y: [7, 7.5, 9, 10, 10]
+        },
+        {
+          x: ['... the benefit for', 'you and your work?'],
+          y: [3, 4, 7, 8, 8]
+        },
+        {
+          x: ['... the overall', 'team vision?'],
+          y: [6, 7, 7.5, 9.75, 10]
+        }
+      ]
+    }
+  ];
+  var chart = new ApexCharts(document.querySelector("#chart-monday"), options);
+  chart.render();
+
+  options.title = {text: 'Thursday Overall Meeting'};
+  options.subtitle = {text: 'On a scale from 1 (worst) to 10 (best), how would you rate...'};
+  options.series = [
+    {
+      data: [
+        {
+          x: ['...the overall', 'effectiveness?'],
+          y: [5, 6, 7, 7.25, 8]
+        },
+        {
+          x: ['... your', 'comfortableness?'],
+          y: [7, 7.75, 9, 10, 10]
+        },
+        {
+          x: ['... the contribution', 'opportunities?'],
+          y: [8, 9, 9, 10, 10]
+        },
+        {
+          x: ['... the benefit for', 'you and your work?'],
+          y: [3, 4.75, 7, 8, 8]
+        }
+      ]
+    }
+  ];
+  var chart = new ApexCharts(document.querySelector("#chart-thursday"), options);
+  chart.render();
+
+  options.title = {text: 'Sovereign Cloud Stack Community'};
+  options.subtitle = {text: 'On a scale from 1 (worst) to 10 (best), how would you rate...'};
+  options.series = [
+    {
+      data: [
+        {
+          x: ['... the healthiness', 'of the community?'],
+          y: [4, 6, 6, 8.5, 10]
+        },
+        {
+          x: ['... the general mood', 'in the community?'],
+          y: [4, 6, 7, 8, 8]
+        },
+        {
+          x: ['... the collaboration', 'infrastructure and tools?'],
+          y: [6, 7, 7, 8, 10]
+        },
+        {
+          x: ['... the progress', 'of the project?'],
+          y: [3, 4, 6, 7, 7]
+        },
+        {
+          x: ['... the overall visibility', 'of the project?'],
+          y: [3, 4, 6, 7.75, 8]
+        }
+      ]
+    }
+  ];
+  var chart = new ApexCharts(document.querySelector("#chart-community"), options);
+  chart.render();
+
+  var options = {
+    series: [
+    {
+      data: [
+        {
+          x: 'Issues',
+          y: 8
+        },
+        {
+          x: 'Documentation',
+          y: 8
+        },
+        {
+          x: 'Code',
+          y: 6
+        },
+        {
+          x: 'Administrative tasks',
+          y: 6
+        },
+        {
+          x: 'Upstream Code',
+          y: 5
+        },
+        {
+          x: 'Upstream Issues',
+          y: 4
+        },
+        {
+          x: 'PR Reviews',
+          y: 3
+        },
+        {
+          x: 'Public Reations',
+          y: 3
+        },
+        {
+          x: 'Leading',
+          y: 3
+        },
+        {
+          x: 'Upstream PR Reviews',
+          y: 2
+        },
+        {
+          x: 'Upstream Documentation',
+          y: 2
+        },
+        {
+          x: "Nothing",
+          y: 1
+        }
+      ]
+    }
+  ],
+    legend: {
+      show: false
+  },
+  chart: {
+    height: 350,
+    type: 'treemap'
+  },
+  title: {
+    text: 'What have you been able to contribute to the project during this year?',
+    align: 'left'
+  },
+  colors: [
+    '#3B93A5',
+    '#F7B844',
+    '#ADD8C7',
+    '#EC3C65',
+    '#CDD7B6',
+    '#C1F666',
+    '#D43F97',
+    '#1E5D8C',
+    '#421243',
+    '#7F94B0',
+    '#EF6537',
+    '#C0ADDB'
+  ],
+  plotOptions: {
+    treemap: {
+      distributed: true,
+      enableShades: false
+    }
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chart-activity"), options);
+  chart.render();
+</script>
+
+<h2 id="organisation-der-entwicklung">Organisation der Entwicklung</h2>
+
+<p>In der Gruppenarbeitsphase kristallisierte aus ursprünglich vier großen Handlungsfeldern die Organisation der Entwicklungsarbeit heraus, über welche in den letzten beiden Stunden des Community Summit intensiv diskutiert wurde. Die Ergebnisse wurden erneut in einem Scrumblr-Board festgehalten.</p>
+
+<figure class="figure mx-auto d-block" style="width:100%">
+  <a href="/assets/images/summit2021/scrumblr-organizing.png">
+    <img src="/assets/images/summit2021/scrumblr-organizing.png" class="figure-img w-100" />
+  </a>
+</figure>
+
+<h2 id="vielen-dank-">Vielen Dank! ❤</h2>
+
+<p>Wir danken euch allen für eure Teilnahme am diesjährigen Community Summit, der einen schönen Abschluss eines ereignisreichen Jahres bildete. Vor allem aber danken wir euch für euer Vertrauen in das Projekt, eure Unterstützung und eure Beiträge zum Erfolg des Sovereign Cloud Stack Projekts. Ohne euch wären wir heute nicht an diesem Punkt!</p>
+
+<p><img src="/assets/images/summit2021/christmas.png" class="my-5 w-50 mx-auto d-block" style="max-width:500px;" /></p>
+
+<h2 id="downloads">Downloads</h2>
+
+<div class="list-group-item list-group-item-action d-flex flex-row align-items-start">
+  <div class="ms-2 me-4 my-auto">
+    <a class="mt-1 text-decoration-none text-secondary stretched-link" href="/assets/slides/summit2021/plusserver.pdf" target="_blank">
+        <i class="fa fa-file-pdf-o"></i>
+    </a>
+  </div>
+  <div>
+    Real Life Usecases für Gaia-X und SCS — <div class="d-inline small fw-light">Stephan Ilaender</div>
+  </div>
+</div>
+
+<div class="list-group-item list-group-item-action d-flex flex-row align-items-start">
+  <div class="ms-2 me-4 my-auto">
+    <a class="mt-1 text-decoration-none text-secondary stretched-link" href="/assets/slides/summit2021/collaboration_over_competition.pdf" target="_blank">
+        <i class="fa fa-file-pdf-o"></i>
+    </a>
+  </div>
+  <div>
+    Collaboration over Comptetition — <div class="d-inline small fw-light">Felix Kronlage-Dammers</div>
+  </div>
+</div>
+
+<div class="list-group-item list-group-item-action d-flex flex-row align-items-start">
+  <div class="ms-2 me-4 my-auto">
+    <a class="mt-1 text-decoration-none text-secondary stretched-link" href="/assets/slides/summit2021/history.pdf" target="_blank">
+        <i class="fa fa-file-pdf-o"></i>
+    </a>
+  </div>
+  <div>
+    The Sovereign Cloud Stack: From Idea to Realisation — <div class="d-inline small fw-light">Kurt Garloff, Dr. Manuela Urban</div>
+  </div>
+</div>
+
+<div class="list-group-item list-group-item-action d-flex flex-row align-items-start">
+  <div class="ms-2 me-4 my-auto">
+    <a class="mt-1 text-decoration-none text-secondary stretched-link" href="/assets/slides/summit2021/travelguide.pdf" target="_blank">
+        <i class="fa fa-file-pdf-o"></i>
+    </a>
+  </div>
+  <div>
+    Travel Guide Sovereign Cloud Stack — <div class="d-inline small fw-light">Eduard Itrich</div>
+  </div>
+</div>
+
+<div class="list-group-item list-group-item-action d-flex flex-row align-items-start">
+  <div class="ms-2 me-4 my-auto">
+    <a class="mt-1 text-decoration-none text-secondary stretched-link" href="/assets/slides/summit2021/tenders.pdf" target="_blank">
+        <i class="fa fa-file-pdf-o"></i>
+    </a>
+  </div>
+  <div>
+    Outlook and review of public tenders — <div class="d-inline small fw-light">Dirk Loßack</div>
+  </div>
+</div>
+
+<div class="list-group-item list-group-item-action d-flex flex-row align-items-start">
+  <div class="ms-2 me-4 my-auto">
+    <a class="mt-1 text-decoration-none text-secondary stretched-link" href="/assets/slides/summit2021/planning2022.pdf" target="_blank">
+        <i class="fa fa-file-pdf-o"></i>
+    </a>
+  </div>
+  <div>
+    Planing SCS for 2022 — <div class="d-inline small fw-light">SCS Product Board</div>
+  </div>
+</div>
+
+<div class="list-group-item list-group-item-action d-flex flex-row align-items-start">
+  <div class="ms-2 me-4 my-auto">
+    <a class="mt-1 text-decoration-none text-secondary stretched-link" href="/assets/images/summit2021/scrumblr-goals-2022.png" target="_blank">
+        <i class="fa fa-file-image-o"></i>
+    </a>
+  </div>
+  <div>
+    Goals for 2022
+  </div>
+</div>
+
+<div class="list-group-item list-group-item-action d-flex flex-row align-items-start">
+  <div class="ms-2 me-4 my-auto">
+    <a class="mt-1 text-decoration-none text-secondary stretched-link" href="/assets/slides/summit2021/retrospectiove.pdf" target="_blank">
+        <i class="fa fa-file-pdf-o"></i>
+    </a>
+  </div>
+  <div>
+    Results of the first retrospective — <div class="d-inline small fw-light">Dirk Loßack</div>
+  </div>
+</div>
+
+<div class="list-group-item list-group-item-action d-flex flex-row align-items-start">
+  <div class="ms-2 me-4 my-auto">
+    <a class="mt-1 text-decoration-none text-secondary stretched-link" href="/assets/images/summit2021/scrumblr-organizing.png" target="_blank">
+        <i class="fa fa-file-image-o"></i>
+    </a>
+  </div>
+  <div>
+    Organizing the Development
+  </div>
+</div>]]></content><author><name>Eduard Itrich</name></author><summary type="html"><![CDATA[Liebe Community,]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/summit2021/dont-go-alone.png" /><media:content medium="image" url="https://scs.community/assets/images/summit2021/dont-go-alone.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Sovereign Cloud Stack Security Advisory log4j</title><link href="https://scs.community/security/2021/12/13/advisory-log4j/" rel="alternate" type="text/html" title="Sovereign Cloud Stack Security Advisory log4j" /><published>2021-12-13T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/security/2021/12/13/advisory-log4j</id><content type="html" xml:base="https://scs.community/security/2021/12/13/advisory-log4j/"><![CDATA[<p><em>(By Christian Berendt, Kurt Garloff, Felix Kronlage-Dammers)</em></p>
+
+<h2 id="the-vulnerability">The vulnerability</h2>
+
+<p>On Fri, 2021-12-10, a design issue in the very popular Java library log4j
+was reported and assigned <a href="https://www.lunasec.io/docs/blog/log4j-zero-day/">CVE-2021-44228</a>
+with a CVSS score of 10, which is the highest
+possible score and thus means that this is a very critical vulnerability.
+In short, log4j interprets strings that are being submitted to it
+causing lookups via the JNDI interface (intended e.g. to do LDAP name resolution).
+If attackers can cause log4j to log attacker controlled strings, these can be used
+to trigger these lookups and cause arbitrary java code to be loaded and
+executed. This can be used to gain access to the
+application that uses log4j and the container/VM that the application
+is running in. As log4j is so popular, many Java applications are
+affected. At this point in time, all log4j versions prior to
+log4j2-2.15(-rc2) are affected.</p>
+
+<p>Our German readers might want to read the excellent summary in the
+<a href="https://www.bsi.bund.de/SharedDocs/Cybersicherheitswarnungen/DE/2021/2021-549032-10F2.pdf?__blob=publicationFile&amp;v=3">BSI advisory</a>.</p>
+
+<h2 id="usage-of-log4j-in-scs">Usage of log4j in SCS</h2>
+
+<p>The main components of Sovereign Cloud Stack do not use Java.
+However, there are Java tools used at a few places:</p>
+
+<ol>
+  <li>Keycloak (Identity broker)</li>
+  <li>Nexus (Mirror manager)</li>
+  <li>Elasticsearch (Log analysis tool)</li>
+</ol>
+
+<p>Neither <a href="https://github.com/keycloak/keycloak/discussions/9078">keycloak</a>
+nor nexus are affected by the log4j vulnerability.</p>
+
+<p>However, Elasticsearch does use log4j. Elasticsearch is rolled out in a
+container on the SCS compute nodes by default in SCS deployments to allow for
+log analysis.</p>
+
+<h2 id="potential-impact">Potential impact</h2>
+
+<p>Normal users do not interact with the Elasticsearch functionality in SCS;
+only operators have access to it. An issue that can be abused by operators
+is not a serious threat to SCS environments, as in all practical setups,
+the operators have more privileges to affect the environment than they
+could gain by exploiting vulnerabilities in Elasticsearch. This might only
+be different in environments with very large operational teams and a very
+fine-grained operational access role model.</p>
+
+<p>However, we can at this point not exclude the possibility that a name
+controlled by the user (such as the name from a resource at OpenStack
+or Kubernetes level) gets logged and later on processed by ElasticSearch
+and logged again via log4j. If so, a user could cause undesired actions
+within the ElasticSearch container. If a potential
+attacker could in addition find another exploit to escape the container
+confinement, he could take over the SCS deployment.</p>
+
+<h2 id="mitigation-and-fix">Mitigation and fix</h2>
+
+<p>Until a new version of the Elasticsearch container that uses a fixed
+log4j is available, we recommend applying the following change:</p>
+
+<ol>
+  <li>
+    <p>Change the configuration repository.
+In <code class="language-plaintext highlighter-rouge">environments/kolla/configuration.yml</code>, add <code class="language-plaintext highlighter-rouge">-Dlog4j2.formatMsgNoLookups=true</code> to the JVM
+startup paramters:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   es_java_opts: "-Dlog4j2.formatMsgNoLookups=true {% if es_heap_size %}-Xms{{ es_heap_size }} -Xmx{{ es_heap_size }}{%endif%}"
+
+</code></pre></div>    </div>
+  </li>
+  <li>Roll out the changes:
+    <ul>
+      <li>If you are <em>not</em> using Celery:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  osism-manager configuration
+</code></pre></div>        </div>
+      </li>
+      <li>If you are using Celery:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  osism apply configuration
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>(Re)deploy Elasticsearch:
+    <ul>
+      <li>If you are <em>not</em> using Celery:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  osism-kolla deploy elastisearch
+</code></pre></div>        </div>
+      </li>
+      <li>If you are using Celery:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  osism apply elasticsearch
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>This causes log4j to no longer interpret the input in ways that lookups
+can be triggered and thus reliably avoids the vulnerability. Please note that
+this setting <code class="language-plaintext highlighter-rouge">log4j2.formatMsgNoLookups</code> is only available in
+log4j2 &gt;= 2.10.0, which is fortunately the case in the Elasticsearch container.</p>
+
+<p>When a new Elasticsearch container built with the fixed log4j (2.16 or better 2.17+)
+becomes available, we’ll issue a new advisory that describes the deployment of the
+new container.</p>
+
+<h2 id="update-2021-12-21-fix-still-valid">Update 2021-12-21: Fix still valid</h2>
+
+<p>Meanwhile, two more security issues around log4j have been reported:
+<a href="https://www.whitesourcesoftware.com/resources/blog/log4j-vulnerability-cve-2021-45046/">CVE-2021-45046</a>
+and <a href="https://www.whitesourcesoftware.com/resources/blog/log4j-vulnerability-cve-2021-45105/">CVE-2021-45105</a>.
+The former is a context lookup vulnerability (as a variation to the JNDI
+lookup vulnerability) while the latter is a Denial of Service attack by
+causing an infinite recursion on the context lookup.</p>
+
+<p>The recommended setting <code class="language-plaintext highlighter-rouge">log4j2.formatMsgNoLookups=true</code>
+is still fully mitigating the issues in our environment.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">es_java_opts</code> setting has been configured in the upstream
+<a href="https://github.com/osism/ansible-defaults">OSISM/ansible_defaults</a>
+repository meanwhile (commit c84f87a6106dd53d08447ac7d5a24b2677da38f0),
+so fresh deployments of SCS testbeds or production environments get
+the mitigation automatically. You can validate this by logging in to
+one of your compute nodes and checking the jvm parameters in the process
+list (elastic search container). You should find <code class="language-plaintext highlighter-rouge">-Dlog4j2.formatMsgNoLookups=true</code>
+in the parameter list.</p>
+
+<h2 id="sovereign-cloud-stack-security-contact">Sovereign Cloud Stack Security Contact</h2>
+
+<p>Please contact the SCS project management team at
+<a href="mailto:project@scs.sovereignit.de">project at scs dot sovereignit dot de </a>
+to ask security questions or report security issues.</p>
+
+<h2 id="version-history">Version history</h2>
+
+<ul>
+  <li>Minor update on 2021-12-21, 17:45 CET:
+    <ul>
+      <li>Information on new CVEs and workaround still being effective.</li>
+      <li>Update recommended log4j version to 2.17+.</li>
+      <li>Mention the implementation and validation in testbed.</li>
+    </ul>
+  </li>
+  <li>Minor update on 2021-12-14, 15:45 CET:
+    <ul>
+      <li>Remove wrong space in <code class="language-plaintext highlighter-rouge">osism apply elasticsearch</code></li>
+      <li>Elsasticsearch is deployed on the compute hosts in typical setups, not the manager node.</li>
+      <li>Mention that lookups are done via JNDI to better connect to other descriptions.</li>
+      <li>Mention that the java parameter is only available on log4j2 &gt;= 2.10, which covers the SCS Elasticsearch.</li>
+      <li>Mention fixed version be better 2.16+.</li>
+    </ul>
+  </li>
+  <li>Initial release on 2021-12-13, 18:30 CET.</li>
+</ul>]]></content><author><name>Kurt Garloff</name></author><category term="security" /><summary type="html"><![CDATA[(By Christian Berendt, Kurt Garloff, Felix Kronlage-Dammers)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/default-card.jpg" /><media:content medium="image" url="https://scs.community/assets/images/default-card.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SCS: Wir arbeiten weiter an Gaia-X für digitale Souveränität</title><link href="https://scs.community/2021/11/25/garloff-gaiax/" rel="alternate" type="text/html" title="SCS: Wir arbeiten weiter an Gaia-X für digitale Souveränität" /><published>2021-11-25T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/2021/11/25/garloff-gaiax</id><content type="html" xml:base="https://scs.community/2021/11/25/garloff-gaiax/"><![CDATA[<p><em>(Von Dr. Manuela Urban, Felix Kronlage-Dammers, Jonas Schäfer, Kurt Garloff)</em></p>
+
+<p><img src="/assets/images/blog/rowing.jpg" style="width:100%; max-height: 450px; object-fit: cover;}" /></p>
+
+<h2 id="kontext">Kontext</h2>
+
+<p>Am 18. und 19. November 2021 fand der zweite <a href="https://gaia-x.eu/">Gaia-X</a>
+Summit statt. Dort wurden Konzepte aufgezeigt, mit denen es Gaia-X ermöglicht,
+regelbasierte föderierte Datenökosysteme entstehen zu lassen, die eine gut
+funktionierende, vertrauenswürdige Basis für datenbasierte Innovation
+darstellen.</p>
+
+<p>Der Summit wurde ein wenig überschattet vom <a href="https://www.theregister.com/2021/11/19/scaleway_gaia_x/">sichtbaren Ausstieg von Scaleway aus Gaia-X</a>.
+Scaleway äußerte sich enttäuscht über den langsamen Fortschritt und ist der
+Ansicht, dass die breite Einbindung der Hyperscaler ein Grund dafür ist. Laut
+Scaleway bestünde die Gefahr, dass die die Hyperscaler das Projekt in die
+falsche Richtung drängen und am Ende wenig für die digitale Souveränität
+erreicht wird.</p>
+
+<p>Dies wurde vereinzelt in der Presse aufgegriffen und als Beleg für den schon
+länger gehegten Verdacht angesehen, dass Gaia-X als aus der
+Politik angestoßene Initiative, als Veranstaltung der Großkonzerne, als von den
+Hyperscalern durchsetzte Initiative, als ein Gericht mit zuvielen Köchen zum
+Scheitern verurteilt sei.</p>
+
+<p>Wir glauben als <a href="https://scs.sommunity/">SCS Projekt</a> weiterhin an die Ziele
+von Gaia-X. Während es sicherlich gerechtfertigte Kritik gibt, haben wir keinen
+Grund, Gaia-X nicht weiterhin als wichtige und nützlich Initiative zu betrachten.</p>
+
+<h2 id="zusammenarbeit-osb-alliance-und-gaia-x">Zusammenarbeit OSB Alliance und Gaia-X</h2>
+
+<p>Die <a href="https://osb-alliance.com">Open Source Business Alliance</a> (OSB Alliance,
+OSBA) ist seit Sommer 2021 Gaia-X Mitglied, hat aber bereits seit Anfang
+2020 über persönliches Engagement und über OSBA Mitglieder wie PlusServer den
+Gründungsprozess des Gaia-X Projekts begleitet.</p>
+
+<p>Die OSB Alliance koordiniert mit dem Projekt <a href="https://scs.community/">Sovereign Cloud Stack</a> (SCS) ein
+signifikantes Projekt, welches mit Mitteln des <a href="https://bmwi.de/">BMWi</a> gefördert wird und
+Technologie liefert, die es Infrastrukturbetreibern sehr viel einfacher macht,
+Gaia-X konforme, souveräne Infrastruktur bereitzustellen. Als solches ist sie
+mit ihrer Community und ihren Mitarbeitern an einigen Gaia-X Arbeitsgruppen beteiligt
+und gestaltet die Arbeit z.B. in der Provider Arbeitsgruppe
+mit. Hier ist auch das SCS Projekt als offenes Arbeitspaket verankert.</p>
+
+<h2 id="erwartungen-und-gaia-x-realität">Erwartungen und Gaia-X Realität</h2>
+
+<p>Die Erwartungen an Gaia-X sind hoch und sehr unterschiedlich. Teilweise
+unrealistisch hoch, wozu sicher auch Äußerungen wie “Moonshot”
+beigetragen haben. Vielfach wurden Ziele in Gaia-X hineinprojiziert, die gar
+nicht der Realität entsprechen, wie z.B. die Hoffnung, dass durch einen
+staatlichen Eingriff mit Hilfe von Gaia-X ein europäischer Hyperscaler
+erschaffen würde, welcher den bedenklichen Einfluß der amerikanischen Plattformen
+zurückdränge.</p>
+
+<p>Der Ansatz von Gaia-X ist ein anderer: Es sollen verifizierbare Standards
+geschaffen werden, mit deren Hilfe Transparenz hergestellt wird, die es
+erlaubt, dass Dienste von verschiedenen Anbietern automatisiert kombiniert
+werden. Die Nachvollziehbarkeit soll nicht nur technische Kompatibilität sichern und
+entsprechende Schnittstellen charakterisieren, sondern insbesondere auch
+Aspekte wie Kontrolle, Sicherheit und Datenschutz beinhalten. Dies ermöglicht
+somit Nutzern eine bewusste Entscheidung, welche Kombination von Angeboten
+ihren Anforderungen entspricht. Die Transparenz über die Einhaltung europäischer
+Datenschutzbestimmungen erlaubt somit auch gesetzeskonformen Einsatz. Die
+Nachvollziehbarkeit wird über zertifizierbare und überprüfbare Selbstbeschreibungen
+gewährleistet, welche vom Föderierer in einem Katalog vorgehalten werden.
+Selbstbeschreibungen werden in der entsprechenden Gaia-X Arbeitsgruppen
+definiert, vom Diensteanbieter ausgefüllt und ggf. von Zertifizierern
+(Conformance Assessment Bodies) überprüft und bestätigt. Eine Open Source
+Implementierung eines verteilten Katalogs entsteht u.a. im
+<a href="https://gxfs.de/">Gaia-X Federation Services</a> (GXFS) Projekt – ein
+weiteres vom BMWi gefördertes Projekt zur Stärkung von Gaia-X.</p>
+
+<p>Der Weg zu diesen Standards ist kein einfacher. Viele Mitwirkende müssen sich
+einigen, damit die Qualität stimmt und auch die Akzeptanz gegeben ist. Das mag
+manchmal frustrierend sein, liegt aber in der Natur der Sache. Ein dominantes
+Unternehmen mit einer integrierten Architektur kann schneller voranschreiten
+als ein Ökosystem, in dem sich auf verschiedenen Ebenen mehrere Akteure auf
+gemeinsame, interoperable Schnittstellen einigen müssen. Mit einem Top-Down
+Vorgehen trifft man schneller Entscheidungen als mit breiter Beteiligung.
+Besser sind sie dadurch nicht – langfristig ist der mühsame Weg der
+leistungsfähigere. Wichtig ist, dass bei den Entscheidungen die Fachkompetenz
+aus der praktischen Umsetzung auch einbezogen wird und die Prozesse transparent
+ablaufen. Kommunikation ist in schnell gewachsenen Strukturen wie Gaia-X nicht
+immer einfach, aber es geht voran.</p>
+
+<h2 id="gaia-x-ist-nicht-nur-theorie">Gaia-X ist nicht nur Theorie</h2>
+
+<p>Alle Theorie bleibt Theorie, wenn sie niemand in die Praxis umsetzt. Tatsächlich
+wird in den Arbeitsgruppen und Komitees der Gaia-X Organisation viel über Konzepte und
+Standards diskutiert und es wird bislang noch wenig Umsetzung sichtbar.
+Nach unserer Erfahrung entstehen gute, praktikable und breit akzeptierte
+Standards vor allem im engen Austausch und einem iterativen Prozess zwischen
+den Beteiligten in Theorie und Praxis. Damit entsteht dann auch ganz nebenbei eine
+Sichtbarkeit und eine Auseinandersetzung mit den Zielen von Gaia-X. Für die benötigten
+offenen Standards müssen dann auch vollständig offene Referenzimplementierungen
+geschaffen werden.</p>
+
+<p>Doch die Realität in Gaia-X ist besser als sie zunächst aussieht. Es gibt einige
+Gruppen, die an der Umsetzung von Gaia-X Konzepten arbeiten. Es gibt die großen
+vom BMWi geförderten Projekte wie z.B. <a href="https://gxfs.de/">GXFS</a>:
+Dort soll aufgrund detaillierter Spezifikationen Code zu den Themen
+Compliance, Data Sovereignty Services, Identity &amp; Trust, Federated Catalogue
+und dem Portal entwickelt werden. Das Sovereign Cloud Stack Projekt (SCS,
+https://scs.community/) hat bereits im September 2021 eine Release 1
+veröffentlicht und kommt schon produktiv bei Cloudanbietern zum Einsatz.
+SCS wird von einer offenen Community in einem offenen Prozess als vollständig
+freie Software entwickelt. Auch GXFS steht unter einer OSS Lizenz.</p>
+
+<p>Daneben gibt es ein französisches Projekt zur Ergänzung der Federation
+Services, Förderprojekte aus dem BMWi Förderwettbewerb, den Eclipse Data
+Connector, die Arbeit in Catena-X und zahlreiche Initiativen von Unternehmen
+und Gruppierungen rund um Gaia-X. Viele davon arbeiten im Arbeitspaket “Minimal
+Viable Gaia” zusammen und nehmen am zweiten Gaia-X Hackathon am 2.+3. Dezember teil
+– da wird dann tatsächlich Technologie entwickelt und getestet.</p>
+
+<figure class="figure mx-auto d-block my-4 col-md-7">
+  <a href="https://www.gaia-x.eu/news/events/gaia-x-hackathon-2" target="_blank">
+    <img src="/assets/images/blog/gx-hackathon-2.png" class="figure-img w-100" />
+  </a>
+  <figcaption class="figure-caption">
+    Beim Gaia-X Hackathon #2 erwartet dich unter anderem ein eigener Track zur geführten Installation von SCS auf echter Hardware.
+  </figcaption>
+</figure>
+
+<p>Leider wurde all das auf dem Gaia-X Summit wenig sichtbar – die Vorstellung
+der Highlights aus dem Hackathon dort hat leider wegen der
+Terminabfolge nicht gepasst.</p>
+
+<h2 id="labels-jenseits-von-datenschutz">Labels jenseits von Datenschutz</h2>
+
+<p>Auf dem Gaia-X Summit wurde das Konzept der sogenannten Labels vorgestellt. Das
+sind die Zertifikate, mit denen Dienste und Anbieter ihre Konformität mit
+Gaia-X Standards ausweisen. Dahinter liegen Kriterien und dazugehörige
+Prüfkataloge, die entsprechend (idealerweise automatisiert) nachzuweisen sind.
+Auf die Details wird genau zu schauen sein – natürlich würden die Ziele einer
+hohen Transparenz und digitalen Souveräntiät durch wachsweiche
+Kriterienkataloge nicht nur verfehlt sondern gar konterkariert.</p>
+
+<p>Sinnvollerweise gibt es verschiedene Stufen der Konformität. Dadurch werden
+auch Angebote einbezogen und transparent gemacht, die keine hohen Standards im
+Bereich Datenschutz erfüllen. Interoperabilität und Transparenz darüber sind ja
+dennoch ein Mehrwert – nicht für alle IT Dienste und Daten sind hohe Ansprüche
+an Datenschutz und Souveränität notwendig. Auf dieser Stufe können auch
+amerikanische Hyperscaler einen wertvollen Beitrag leisten.</p>
+
+<p>Die drei in Gaia-X skizzierten Stufen <em>basic</em>, <em>substantial</em>, <em>high</em> lehnen sich an
+die entsprechenden Stufen der ENISA im European Cybersecurity Scheme for Cloud
+Services an. Bei der höchsten Stufe wäre ein Zugriff von außerhalb Europas mit
+hoher Sicherheit ausgeschlossen – dies ist nur mit Plattformen zu
+gewährleisten, die im Betrieb vollständig unter der Kontrolle europäischer
+Unternehmen stehen.</p>
+
+<p>Damit wird der Bereich Datenschutz durch Gaia-X Labels gut abgebildet und
+sinnvollerweise mit bewährten Standards in diesem Bereich verknüpft.</p>
+
+<p>Digitale Souveränität geht jedoch weit über Datenschutz hinaus.</p>
+
+<p>Für Innovations- und Gestaltungsmöglichkeit der digitalen Plattformen bedarf es der
+Möglichkeit, Nutzern auch Kontrolle über die Technologie und ihrer
+Implementierung zu geben. Dies ist mit proprietären Technologiestacks kaum
+darstellbar; dies kann nur mit einem vollständiger Offenheit erreicht werden. Genau
+daran arbeiten wir im Sovereign Cloud Stack Projekt und sehen in der
+Kombination mit weiteren freien Technologien aus dem Gaia-X Umfeld (und zukünftig
+dem angestrebten IPCEI-CIS) wie GXFS auch eine attraktive Kombination für Unternehmen, die für
+den Eigenbedarf oder für Dritte föderierbare, interoperable und vollständig
+souveräne Dienste anbieten möchten.</p>
+
+<p>Dieser wichtige Aspekt der digitalen Souveränität ist in der Beschreibung der
+Gaia-X Labels bislang leider nicht berücksichtigt – wir erwarten, dass hier
+eine Weiterentwicklung stattfinden wird und wirken darauf auch im Rahmen
+unserer Mitarbeit an den Gaia-X Arbeitsgruppen und offenen Arbeitspaketen hin.</p>
+
+<p>Gaia-X ist eine große Aufgabe und ein Gemeinschaftswerk. Das braucht die
+Unterstützung vieler und langen Atem. Aber genau darin wird es seine Stärke
+entfalten.</p>]]></content><author><name>Kurt Garloff</name></author><summary type="html"><![CDATA[(Von Dr. Manuela Urban, Felix Kronlage-Dammers, Jonas Schäfer, Kurt Garloff)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/blog/rowing.jpg" /><media:content medium="image" url="https://scs.community/assets/images/blog/rowing.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SCS Release 1 freigegeben</title><link href="https://scs.community/release/2021/10/05/release1/" rel="alternate" type="text/html" title="SCS Release 1 freigegeben" /><published>2021-10-05T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/release/2021/10/05/release1</id><content type="html" xml:base="https://scs.community/release/2021/10/05/release1/"><![CDATA[<p>Nach dem im Juli freigegebenen Release R0 mit Fokus auf die Installation einer <a href="https://docs.osism.tech/testbed/">Testumgebung</a>, wurde am vergangenen Mittwoch, den 29.09.2021, das Release R1 von Sovereign Cloud Stack veröffentlicht.</p>
+
+<p>Grundlage von R1 bildet unter anderem das <a href="https://releases.openstack.org/wallaby/">OpenStack Wallaby Release</a>, <a href="https://github.com/kubernetes/kubernetes/releases">Kubernetes in der Version v1.21.x</a> sowie die <a href="https://github.com/kubernetes-sigs/cluster-api/releases">Kubernetes Cluster API in Version v0.4</a>.</p>
+
+<p>Die <a href="https://github.com/SovereignCloudStack/Docs/blob/main/Release-Notes/Release1.md">vollständigen Release-Informationen</a> inklusive technischen Details sind im <a href="https://github.com/SovereignCloudStack/Docs">zentralen Docs Repository</a> des SCS-Projektes auf GitHub zu finden.</p>
+
+<h2 id="kubernetes-cluster-als-self-service-dank-cluster-api">Kubernetes Cluster als Self-Service dank Cluster API</h2>
+
+<p>Ein besonderes Augenmerk lag diesmal auf dem Management von Kubernetes-Containern auf Basis der k8s Cluster API, welche in der Version Alpha 4 integriert wurde. Sowohl durch die Konformitätstests der <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> mittels <a href="https://sonobuoy.io/">sonobouy</a>, als auch im realen Einsatz während des <a href="https://www.gaia-x.eu/news/gaia-x-hackathon-1-new-technology-develops-live-today-and-tomorrow">ersten Gaia-X Hackathon</a> am 30. und 31. August 2021 wurde der produktive Reifegrad des k8s Clustermanagements von SCS erprobt und festgestellt.</p>
+
+<figure class="figure mx-auto d-block" style="width:90%">
+  <a href="/assets/images/release1/screenshot-capi-provisioning-k9s.png">
+    <img src="/assets/images/release1/screenshot-capi-provisioning-k9s.png" class="figure-img w-100" />
+  </a>
+    <figcaption class="figure-caption">
+    Dank der k8s-cluster-API können Kubernetes Cluster spielend einfach verwaltet werden.
+  </figcaption>
+</figure>
+
+<p>Mit der Kubernetes Cluster API werden DevOps Teams in die Lage versetzt, selbstständig Kubernetes-Cluster für Entwicklungs-, für Test- und Staging- sowie für Produktivumgebungen zu erstellen und anschließend zu verwalten. Natürlich kann über dieselbe Technologie auch der Cloudbetreiber seinen Nutzern einen Managed Service anbieten. Detaillierte <a href="https://github.com/SovereignCloudStack/k8s-cluster-api-provider/blob/master/Release-Notes-R1.md">Release-Informationen zum k8s-cluster-api-provider</a> von SCS finden sich im entsprechenden <a href="https://github.com/SovereignCloudStack/k8s-cluster-api-provider">Repository</a>.</p>
+
+<h2 id="souveräner-betrieb-durch-monitorung-und-logging">Souveräner Betrieb durch Monitorung und Logging</h2>
+
+<p>Die “Special Interest Group Monitoring” des Sovereign-Cloud-Stack-Projektes hat in den vergangenen Wochen <a href="https://github.com/osism/kolla-operations">umfangreiche Beispiele für das Monitoring von SCS-Umgebungen</a> zusammengestellt. Die Blaupausen für Prometheus Exporter, Rules und Grafana Dashboards können nach entsprechender Anpassung von Providern genutzt werden, um niederschwellig den qualitativ hochwertigen Betrieb der eigenen SCS-Plattform sicherzustellen.</p>
+
+<figure class="figure mx-auto d-block" style="width:90%">
+  <a href="/assets/images/release1/screenshot-ceph-dashboard.png">
+    <img src="/assets/images/release1/screenshot-ceph-dashboard.png" class="figure-img w-100" />
+  </a>
+    <figcaption class="figure-caption">
+    Mit R1 stehen leicht zu nutzende Dashboards bereit.
+  </figcaption>
+</figure>
+
+<p>Für das kommende Release ist geplant, diese Blaupausen direkt im Testbed Deployment zu integrieren und ebenfalls der OpenStack Upstream Community zur Verfügung zu stellen. Wir freuen uns insbesondere über Feedback zu den in Release R1 integrierten Beispielen und darüber hinaus über Anregungen zu weiteren wesentlichen Betriebswerkzeugen.</p>
+
+<p>Mit der in Release R1 aktuellen Version von OSISM ist mittlerweile auch das zentrale Logging standardmäßig aktiviert. Die Logging-Regeln müssen durch den Provider noch entsprechend seiner Umgebung angepasst werden. Ebenso wie im Bereich Monitoring planen wir auch im Bereich Logging bereits erprobte Regeln als Blaupause mit den kommenden Releases zu veröffentlichen.</p>
+
+<h2 id="eine-föderierte-und-sichere-datenplattform">Eine föderierte und sichere Datenplattform</h2>
+
+<p>Die Authentifizierung gegenüber Horizon, der OpenStack Standard-Weboberfläche zur Nutzung einer SCS Cloud, kann mit dem aktuellen Release zusätzlich durch <a href="https://openid.net/connect/">OpenID Connect</a> via der integrierten Identity-and-Access-Management-Lösung Keycloak erfolgen. Hierdurch kann ganz im Sinne von Gaia-X eine Föderierung über mehrere Cloud Service Provider hinweg realisiert werden.</p>
+
+<p>Für das nachfolgende Release R2 ist geplant, weiter an der Hochverfügbarkeit des IAM-Dienstes zu arbeiten, welche zum Zeitpunkt des Release in ihrer derzeitigen Implementierung auf Basis von Galera Cluster nicht vollständig getestet werden konnte.</p>
+
+<h2 id="automatisierte-verteilung-auf-bare-metal">Automatisierte Verteilung auf Bare Metal</h2>
+
+<p>Zur automatisierten Verteilung des Sovereign Cloud Stacks auf physischer Hardware kann mittels OSISM der Dienst <a href="https://ironicbaremetal.org/">ironic</a> installiert werden. Um ein vorheriges Testen der automatisierten Verteilung zu ermöglichen, wurde ein virtueller BMC-Dienst integriert, so dass Bare Metal Deployments ebenfalls im Testbed erprobt werden können. Die wesentlichen Bausteine sind Upstream bereits vorhanden, wurden aber aufgrund der zeitlichen Nähe des Releases nicht mehr vollständig in R1 integriert.</p>
+
+<h2 id="weitere-ankündigungen-zum-projekt">Weitere Ankündigungen zum Projekt</h2>
+
+<p>Nach dem erfolgreichen Engagement der SCS Community im ersten Gaia-X Hackathon werden bereits konkrete Planungen für den zweiten Hackathon am 2. und 3. Dezember 2021 getroffen. Hierbei wird eine eigene zweitägige Session angeboten, in welcher eine vollständig souveräne Cloud von Grund auf aufgebaut wird. Interessierte Cloud-Architekt:innen sind herzlich eingeladen, gemeinsam mit uns ein SCS hands-on auf realer Hardware zu installieren und zu betreiben.</p>
+
+<p><img src="/assets/images/logo-greencis.png" class="float-left" alt="GREEN-CIS" style="width:300px;" /></p>
+
+<p>Darüber hinaus beteiligt sich das SCS-Projekt im Rahmen des “Important Project of Common European Interest - Cloud Infrastructure and Services” (IPCEI-CIS) aktiv im sogenannten GREEN-CIS-Konsortium, kurz für “General Purpose Resilient and Secure Energy Efficient Computing Infrastructure Network”. Dieses wachsende Bündnis aus insgesamt 28 Industrie- und Forschungspartnern hat sich zum Ziel gesetzt, ein virtuelles, nachhaltiges und als Einheit operierendes Cloud-Edge-System auf der Grundlage eines dezentralen, Multi-Provider-Ökosystems zu entwickeln und aufzubauen. Hierbei freuen wir uns über das positive Feedback des Bundesministeriums für Wirtschaft und Energie, welches das GREEN-CIS-Konsortium zusammen mit 21 weiteren Projekten in das europäische Matchmaking am 06. Oktober 2021 entsenden wird.</p>
+
+<p>Hierbei spielt das Sovereign-Cloud-Stack-Projekt als offene und souveräne Cloud-Technologie eine zentrale Rolle und soll perspektivisch als Basis für weitere Plattformdienste sowie für eine moderne Edge-Cloud dienen.</p>]]></content><author><name>Sovereign Cloud Stack</name></author><category term="release" /><summary type="html"><![CDATA[Nach dem im Juli freigegebenen Release R0 mit Fokus auf die Installation einer Testumgebung, wurde am vergangenen Mittwoch, den 29.09.2021, das Release R1 von Sovereign Cloud Stack veröffentlicht.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/default-card.jpg" /><media:content medium="image" url="https://scs.community/assets/images/default-card.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Kennst du das Geheimnis nachhaltiger Open Source Projekte?</title><link href="https://scs.community/2021/09/29/run2021/" rel="alternate" type="text/html" title="Kennst du das Geheimnis nachhaltiger Open Source Projekte?" /><published>2021-09-29T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/2021/09/29/run2021</id><content type="html" xml:base="https://scs.community/2021/09/29/run2021/"><![CDATA[<p>Wir verraten es dir! 🤫</p>
+
+<p>Der Schlüssel zum Erfolg ist eine aktive und gesunde Community…</p>
+
+<p>… und wir von Sovereign Cloud Stack nehmen dies sehr ernst! 👟</p>
+
+<h2 id="unsere-gemeinsame-mission-runningfreedom">Unsere gemeinsame Mission: #RunningFreedom</h2>
+
+<p>Mehr als 30 SCS Communitymitglieder sind während der Woche vom 20.09. - 26.09.2021 zum diesjährigen Herbstlauf der <a href="https://laufcampus-runningdays.com/en/">Running Days</a> angetreten. Dabei haben sich sechs Teams innerhalb unserer Community im 10-Kilometer-Lauf untereinander gemessen. Wir danken euch allen für eure Teilnahme an unserem ersten Communitylauf und sind wirklich sehr stolz darauf Teil einer so aktiven Community zu sein.</p>
+
+<figure class="figure mx-auto d-block" style="width:70%">
+  <a href="/assets/images/run2021/collage2021.png">
+    <img src="/assets/images/run2021/collage2021.png" class="figure-img w-100" />
+  </a>
+</figure>
+
+<p>Jede und jeder von euch hat eine großartige Leistung erbracht und gemeinsam haben wir bewiesen, dass der Sovereign Cloud Stack sowohl in der Cloud als auch auf dem Boden läuft! Die vier schnellsten Zeiten eines jeden Teams wurden zu einer Gesamtzeit aufsummiert und in der folgenden Tabelle festgehalten.</p>
+
+<div class="table-responsive mb-3">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>Gesamtzeit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Team Leitwerk #1</td>
+        <td>03:11:22</td>
+      </tr>
+      <tr>
+        <td>Team OSB Alliance</td>
+        <td>03:57:00</td>
+      </tr>
+      <tr>
+        <td>Team Univention</td>
+        <td>03:59:51</td>
+      </tr>
+      <tr>
+        <td>Team Leitwerk #2</td>
+        <td>04:04:45</td>
+      </tr>
+      <tr>
+        <td>Team SCS</td>
+        <td>05:42:33</td>
+      </tr>
+      <tr>
+        <td>Team Leitwerk #3</td>
+        <td>07:08:12</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h2 id="and-the-winner-is">And the winner is…</h2>
+
+<p>Wir gratulieren unserem Siegerteam von der <a href="leitwerk.de">Leitwerk AG</a>, die nicht nur den Staffellauf von 4 x 10km gewonnen haben, sondern auch durch ein Sponsoring dieses Event überhaupt möglich gemacht haben. Glückwünsche an Christian, Markus, Uwe, Martin und Ivan für eure tolle Performance. Ihr habt euch den diesjährigen Teampokal wahrlich verdient!</p>
+
+<figure class="figure mx-auto d-block" style="width:70%">
+  <a href="/assets/images/run2021/winners2021.jpg">
+    <img src="/assets/images/run2021/winners2021.jpg" class="figure-img w-100" />
+  </a>
+  <figcaption class="figure-caption">
+    Siegerteam des #RunningFreedom2021, v.r.n.l.: Christian, Markus, Uwe, Martin und Ivan von der Leitwerk AG
+  </figcaption>
+</figure>
+
+<p>Zusätzlich möchten wir auch Martin Weschle für seine herausragende Zeit von 00:43:58h sowie Manuela Urban zu einer Laufzeit von 00:58:40h beglückwünschen. Werdet nicht träge - die Pokale werden euch im nächsten Jahr schon bald wieder streitig gemacht! Wir planen bereits jetzt weitere sportliche Community Events über das Laufen hinaus.</p>
+
+<h2 id="bis-bald">Bis bald!</h2>
+
+<p>Die #RunningFreedom2021 Pokale werden wir während unseres ersten Community Summits am 9. Dezember 2021 auf der Cloud Expo Europe in Frankfurt am Main verleihen. Weitere Details zu unserem ersten physischen Meet-up werden wir schon bald hier veröffentlichen.</p>]]></content><author><name>Eduard Itrich</name></author><summary type="html"><![CDATA[Wir verraten es dir! 🤫]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/run2021/collage2021.png" /><media:content medium="image" url="https://scs.community/assets/images/run2021/collage2021.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SCS Release 0 freigegeben</title><link href="https://scs.community/release/2021/07/15/release0/" rel="alternate" type="text/html" title="SCS Release 0 freigegeben" /><published>2021-07-15T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/release/2021/07/15/release0</id><content type="html" xml:base="https://scs.community/release/2021/07/15/release0/"><![CDATA[<p>Wir freuen uns, die Release 0 von Sovereign Cloud Stack freizugeben.</p>
+
+<p>Während wir erst vor wenigen Tagen die offizielle Projektfinanzierung erhalten
+haben, haben wir dennoch bereits eine Community aufgebaut, welche nützliche
+Arbeit durch gemeinschaftliche Software Entwicklung leisten konnte.</p>
+
+<p>R0 ist das Ergebnis von mehr als einem Jahr Arbeit, welche alle auf github
+nachvollziehbar ist.
+<a href="https://github.com/SovereignCloudStack/">SCS</a> verlässt sich stark auf
+<a href="https://github.com/OSISM/">OSISM</a>, wir bauen also auf vielen Jahren Arbeit
+dort auf. Eine Menge Arbeit aus SCS ist dorthin zurückgeflossen.
+SCS und OSISM bauen beide natürlich tausenden Personenjahren Arbeit
+der upstream Communities auf. Wir stehen auf den Schultern von Riesen.</p>
+
+<p>Wir sind stolz darauf, was wir mit unseren Community aus Freiwilligen
+erreichen konnten! Die Automatisierung fürs Lifecycle Management der
+(containerisierten) Basisinfrastruktur, Betriebswerkzeuge, Nutzer- und
+Zugriffsmanagement, und die IaaS Schicht sind grundsolide.
+Die ersten zwei Partner, <a href="https://betacloud.de">betacloud</a> und
+<a href="https://www.plusserver.com/produkte/pluscloud">PlusServer</a> nutzen
+SCS schon für ihre produktiven Clouds und weitere sind schon unterwegs.
+Wir haben die Demonstrator (gx-scs) Umgebung von PlusCloudOpen
+mit <a href="https://github.com/SovereignCloudStack/openstack-health-monitor">openstack-health-monitor</a>
+überwacht und haben nun über Wochen eine einzige Warnung wegen Langsamkeit
+und keinen einzigen Alarm beobachtet. Das ist eine große Errungenschaft.</p>
+
+<p>Wir möchten allen danken, die zu dieser Release beigetragen haben.</p>
+
+<p>R0 ist auf die Installation des <a href="https://docs.osism.tech/testbed/">testbed</a> fokussiert.
+Wir wollen es zum jetzigen Zeitpunkt allen möglichst einfach machen, SCS zum
+Zweck des Testens, der Inspektion, Mitarbeit, Vergleich, Inspiration …
+zu installieren.
+Das soll niemanden davon abhalten, eine produktive Installation auf
+Blech durchzuführen. Wie erwähnt haben wir ja bereits zwei Cloudanbieter
+mit SCS in Produktion. Das Testbed zu erkunden ist aber typischerweise der
+erste Schritt. Nehmen Sie Kontakt mit uns auf, wenn Sie schon mit dem
+Testbed vertraut sind und jetzt den nächsten Schritt gehen wollen.</p>
+
+<p>Wir haben in den vergangenen Tage eine Menge Dokumentation auf den aktuellen
+Stand gebracht. Nutzen Sie unser <a href="https://github.com/SovereignCloudStack/Docs/">github Docs</a>
+repository als Einstiegspunkt. Für R0 gibt es
+<a href="https://github.com/SovereignCloudStack/Docs/blob/main/Release-Notes/Release0.md">spezifische Release Notes</a>.
+Die Dokumente sind natürlich auch von unserer <a href="/de/get">“SCS nutzen”</a> Seite
+in unserer <a href="/de">Webpräsenz</a> verlinkt.</p>
+
+<p>The Dokumentation erklärt, wie man eine Testbed Installation durchführen kann,
+dokumentiert aber auch die Komponenten im Technical Preview Status
+wie z.B. die Kubernetes aaS Bausteine, welche die
+<a href="https://github.com/SovereignCloudStack/k8s-cluster-api-provider">k8s-cluster-api</a>
+nutzen. Dies wird eines der wichtigen zentralen Themen für R1 sein, welches wir bereits
+im September herausgeben wollen. (Hinweis: Wir werden danach mit einem
+6-monatigen Releasezyklus arbeiten, wobei die Wirklichkeit etwas kontinuierlicher
+sein wird, als das jetzt klingt.)</p>
+
+<p>Kontaktieren Sie uns mit Fragen oder Feedback. Wir freuen uns über github
+issues und PullRequests, werden aber auch versuchen, alle
+<a href="mailto:project@scs.sovereignit.de">emails</a> zu berücksichtigen.</p>]]></content><author><name>Sovereign Cloud Stack</name></author><category term="release" /><summary type="html"><![CDATA[Wir freuen uns, die Release 0 von Sovereign Cloud Stack freizugeben.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/default-card.jpg" /><media:content medium="image" url="https://scs.community/assets/images/default-card.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OSB Alliance entwickelt Sovereign Cloud Stack (SCS) für das GAIA-X Projekt</title><link href="https://scs.community/2021/07/13/osba-develops-scs-for-gaiax/" rel="alternate" type="text/html" title="OSB Alliance entwickelt Sovereign Cloud Stack (SCS) für das GAIA-X Projekt" /><published>2021-07-13T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/2021/07/13/osba-develops-scs-for-gaiax</id><content type="html" xml:base="https://scs.community/2021/07/13/osba-develops-scs-for-gaiax/"><![CDATA[<p>Stuttgart / Berlin, 13.07.2021 ‒ Unternehmen, Bürger und Staat speichern und
+verarbeiten teils sehr sensible Daten in Clouds, deren Funktionsweise sie nicht
+überprüfen oder an ihre Bedürfnisse anpassen können. Daraus ergeben sich
+Kontrollverluste und starke technologische Abhängigkeiten von einzelnen, großen
+Anbietern. Die Open Source Business Alliance (OSB Alliance) entwickelt nun mit
+dem Sovereign Cloud Stack (SCS) einen technischen Unterbau für Gaia-X, der
+vollständige digitale Souveränität ermöglicht.</p>
+
+<p>Das SCS-Projekt wurde im November 2019 von Peter Ganten, dem
+Vorstandsvorsitzenden der OSB Alliance, Kurt Garloff, einem führenden
+Cloud-Architekten, Rafael Laguna de la Vera, dem Direktor der Bundesagentur für
+Sprunginnovation, sowie Oliver Mauss, dem früheren CEO von plusserver
+initiiert. Das Projekt wurde zunächst mit Mitteln der Bundesagentur für
+Sprunginnovationen SPRIND evaluiert und erhält nun vom Bundesministerium für
+Wirtschaft und Energie (BMWi) Fördergelder in Höhe von 14,9M€ für die
+Entwicklung und den Aufbau des Sovereign Cloud Stack.</p>
+
+<p>Die Open Source Business Alliance baut dazu ein weiter wachsendes Team auf,
+welches die Standardisierung, die Softwareintegration und den Aufbau des
+Netzwerks steuert und koordiniert. Um dieses Team ist bereits jetzt eine
+Community aus Mitarbeiterinnen und Mitarbeitern beteiligter und interessierter
+Firmen entstanden, welche insbesondere an den Zielen mitarbeiten, die für ihre
+eigenen Umgebungen wichtig sind. Wichtige Bausteine sollen außerdem über offene
+Ausschreibungen an Unternehmen vergeben werden. Zusätzlich wird die OSB
+Alliance eine eigene Test-, Demo- und Entwicklungsplattform aufbauen und
+betreiben.</p>
+
+<p>Die Mitarbeit an SCS ist nicht auf Mitglieder der OSB Alliance begrenzt. Denn
+nur eine Vielzahl von Anbietern innerhalb und außerhalb der OSB Alliance
+erlaubt es der Industrie, ohne die strategischen, ökonomischen und rechtlichen
+Risiken, die sich durch die Nutzung der Hyperscaler aus den USA und China
+ergeben, moderne und agile IT Infrastukturen zu nutzen, welche den
+Entwicklungsteams eine entsprechende Flexibilität, Geschwindigkeit und
+letztlich Produktivität ermöglicht.</p>
+
+<h3 id="statements">Statements:</h3>
+
+<p><img class="img-fluid pe-3" width="150px" src="/assets/images/Peter_Ganten-200x200.webp" alt="Peter Ganten" style="vertical-align: text-bottom;" />
+<em>Peter Ganten, Vorstandsvorsitzender der OSB Alliance und Geschäftsführer von Univention:</em></p>
+
+<blockquote>
+  <p>Im Mittelpunkt der ersten Welle der Digitalisierung standen zentralistische
+Plattformen mit gravierend negativen Konsequenzen für Datensicherheit,
+Innovationsfähigkeit und Unabhängigkeit ihrer Anwender. Das Sovereign Cloud
+Stack Projekt leistet einen entscheidenden Beitrag als Grundlage für die nun
+folgende zweite Welle der Digitalisierung mit offenen, föderierbaren und ohne
+Genehmigung einsetzbaren Technologien. Anwenderorganisationen können damit frei
+zwischen Anbietern wechseln oder auch entscheiden, Teile ihrer IT unter eigener
+Kontrolle zu produzieren. So entsteht einen offene Plattform für innovative
+Anwendungen und Dienste, die Wettbewerb ermöglicht, Innovationen fördert und
+Probleme wie den CLOUD Act nicht hat.</p>
+</blockquote>
+
+<p><br />
+<img class="img-fluid pe-3" width="150px" src="/assets/images/Thomas-Jarzombek-200x200.webp" alt="Thomas Jarzombek" style="vertical-align: text-bottom;" />
+<em>Thomas Jarzombek (MdB), Beauftragter des BMWi für die Digitale Wirtschaft und Start-Ups:</em></p>
+
+<blockquote>
+  <p>Mit dem Sovereign Cloud Stack füllt sich das Projekt GAIA-X immer
+mehr mit Leben. Als Beitrag zu einer europäischen digitalen Souveränität soll
+der technische Unterbau, der Cloud Stack, als Open-Source-Projekt umgesetzt
+werden. Damit setzt das BMWi an dieser Stelle auf Wettbewerb, um zukünftig auch
+den Wechsel zwischen Anbietern zu ermöglichen. Es wird mittelständischen
+Unternehmen, aber auch der öffentlichen Verwaltung erleichtern, die Vorteile
+von GAIA-X in konkreten Projekten zu nutzen. Der Sovereign Cloud Stack wird
+dabei eng mit den Kernkomponenten von GAIA-X, den so genannten Federation
+Services verbunden, deren Erstellung ebenfalls vom BMWi gefördert wird und weit
+fortgeschritten ist. Zusammen mit weiteren Fördermaßnahmen wie dem
+GAIA-X-Förderwettbewerb oder für Zukunftsinvestitionen in die Fahrzeugindustrie
+(KoPa35c) verleiht das BMWi der Umsetzung von GAIA-X erheblichen Schwung.</p>
+</blockquote>
+
+<p><br />
+<img class="img-fluid pe-3" width="150px" src="/assets/images/Kurt_Garloff-200x200.webp" alt="Kurt Garloff" style="vertical-align: text-bottom;" />
+<em>Kurt Garloff, Projektleiter SCS:</em></p>
+
+<blockquote>
+  <p>Wir haben alle Bausteine für einen
+leistungsfähigen Cloud- und Containerstack als Open Source Software in
+vernünftiger Qualität vorliegen. Diese konsistent zusammenzubauen und die
+Qualität und Sicherheit des Ergebnisses mit kontinuierlichen Testprozessen
+abzusichern, ist aber eine Menge Arbeit, die viel Spezialwissen benötigt. Und
+danach kommt noch die größere Hälfte der Arbeit: Die Plattformen müssen im
+Betrieb durch Automatisierung und ausgereifte Prozesse abgesichert werden.
+Integration, kontinuierliches Testen, Betriebsautomatisierung und
+Entwicklung der Betriebsprozesse erfolgt heute in vielen Unternehmen und bei
+Cloudbetreibern unabhängig voneinander. Mit SCS vernetzen wir diese
+Anstrengungen, so dass viel weniger Arbeit mehrfach durchgeführt wird. Neben
+der Zusammenarbeit bei der Entwicklung als Open Source etablieren wir so auch
+Zusammenarbeit im Betrieb, Open Operations. Im Ergebnis erreichen wir einen
+viel leistungsfähigeren Stack mit höherer Qualität und höherer
+Standardisierung. Letzteres ist gerade für Nutzerinnen und Nutzer wichtig, die
+Anwendungen auf mehreren Clouds betreiben oder auf eine Mischung selbst
+betriebener SCS Clouds und öffentlicher SCS Angebote setzen.</p>
+</blockquote>
+
+<p><br />
+<img class="img-fluid pe-3" width="150px" src="/assets/images/Rafael_Laguna-200x200.webp" alt="Rafael Laguna de la Vera" style="vertical-align: text-bottom;" />
+<em>Rafael Laguna de la Vera, Direktor der Bundesagentur für Sprunginnovationen
+SPRIND:</em></p>
+
+<blockquote>
+  <p>Der Sovereign Cloud Stack ist ein hervorragendes Beispiel dafür, wie
+staatliches Eingreifen einen nicht mehr funktionierenden Markt reparieren kann.
+Denn obwohl die dominanten Cloud-Anbieter aus den USA allesamt sehr viel
+Open-Source in ihren proprietären Cloud Stacks verwenden, gibt es heute keinen
+fairen Wettbewerb, weil ein Wechsel zwischen verschiedenen Anbietern aufwendig
+und teuer ist. SCS entfernt den ´Lock-in-Effekt´ und sorgt dafür, dass auch
+kleinere Anbieter mit innovativen Lösungen eine Chance haben</p>
+</blockquote>
+
+<p><br />
+<img class="img-fluid pe-3" width="150px" src="/assets/images/Alexander-Wallner-200x200.webp" alt="Alexander Wallner" style="vertical-align: text-bottom;" />
+<em>Alexander Wallner, CEO, plusserver:</em></p>
+<blockquote>
+  <p>Mit dem Sovereign Cloud Stack bündeln wir
+die Kräfte vieler Open-Source Projekte, um einen leistungsfähigen und
+ganzheitlichen Cloud Stack zu schaffen.  So schaffen wir eine
+Technologie-Plattform, die hoffentlich rasch zu einem neuen Cloud-Standard
+werden wird. Für Cloud-Anbieter, wie plusserver, ist der SCS ein wichtiger
+Baustein für technologische und wirtschaftliche Unabhängigkeit. Für
+Unternehmen und andere Anwender stellt der SCS sicher, dass sie ihre Dienste
+frei zwischen den Plattformen verschiedener Anbieter verschieben können. So
+fördern wir den Wettbewerb im europäischen Cloud-Markt.</p>
+</blockquote>
+
+<p><br />
+<img class="img-fluid pe-3" width="150px" src="/assets/images/Marius_Feldmann-200x200.webp" alt="Marius Feldmann" style="vertical-align: text-bottom;" />
+<em>Marius Feldmann, COO, Cloud&amp;Heat Technologies GmbH:</em></p>
+
+<blockquote>
+  <p>Der Sovereign Cloud Stack
+leistet einen signifikanten Beitrag, dass sich Cloud-Anbieter in Europa nicht
+in Konkurrenzkämpfen aufreiben, sondern ihre Kräfte in Kooperationen vereinen.
+Wir erhoffen uns dabei ein Ökosystem, in dem Cloud-Angebote gemeinsam
+entwickelt und betrieben werden. Als Anbieter nachhaltiger und sicherer
+digitaler Infrastrukturen stehen wir derzeit vor der Herausforderung, ein
+hochskalierbares Betriebsmodell für unseren Technologiestack zu schaffen. Um
+die Betriebskompetenz anderer Anbieter kooperativ einbinden zu können, bedarf
+es für die eingesetzte Cloud-Plattform eines gemeinsamen Technologie- und
+Betriebsstandards, wie er im Rahmen des SCS-Projektes entwickelt wird.</p>
+</blockquote>
+
+<p><br />
+Eine ausführliche, ständig aktualisierte Projektübersicht finden Sie auf der
+<a href="https://osb-alliance.de/sovereign-cloud-stack-scs">Website der OSB Alliance</a> unter
+https://osb-alliance.de/sovereign-cloud-stack-scs und auf der 
+<a href="https://scs.community/">Website des SCS Projektes</a>.</p>
+
+<h3 id="über-die-open-source-business-alliance-osb-alliance">Über die Open Source Business Alliance (OSB Alliance)</h3>
+
+<p>Die Open Source Business
+Alliance (OSB Alliance) ist der Verband der Open Source Industrie in
+Deutschland. Dabei vertreten wir über 170 Mitgliedsunternehmen, die in
+Deutschland ca. 10.000 Mitarbeiter beschäftigen und jährlich mehr als 1,7
+Milliarden Euro erwirtschaften. Gemeinsam mit wissenschaftlichen Einrichtungen
+und Anwenderorganisationen setzen wir uns dafür ein, die zentrale Bedeutung von
+Open Source Software und offenen Standards für einen erfolgreichen digitalen
+Wandel im öffentlichen Bewusstsein nachhaltig zu verankern. Dieser digitale
+Wandel soll Unternehmen, Staat und Gesellschaft gleicherweise zugutekommen.
+Zudem sollen Innovationen im Bereich Open Source vorangetrieben werden. Unser
+Ziel ist es, Open Source als Standard in der öffentlichen Beschaffung und bei
+der Forschungs- und Wirtschaftsförderung zu etablieren. Denn Open Source und
+offene Standards sind zwingende Grundlagen für digitale Souveränität,
+Innovationsfähigkeit und Sicherheit im digitalen Wandel und damit die Antwort
+auf eine der größten Herausforderungen unserer Zeit.</p>
+
+<p>Pressekontakt: Lisa Reisch <a href="mailto:presse@osb-alliance.com">presse at osb-alliance dot com</a></p>
+
+<p>OSB Alliance e.V.<br />
+Breitscheidstr. 4<br />
+70174 Stuttgart<br />
+Tel.: +49 (711) 90715-390</p>
+
+<p>E-Mail: <a href="mailto:info@osb-alliance.com">info at osb minus alliance dot com</a><br />
+Internet: <a href="https://osb-alliance.com">osb minus alliance dot com</a></p>]]></content><author><name>Open Source Business Alliance</name></author><summary type="html"><![CDATA[Stuttgart / Berlin, 13.07.2021 ‒ Unternehmen, Bürger und Staat speichern und verarbeiten teils sehr sensible Daten in Clouds, deren Funktionsweise sie nicht überprüfen oder an ihre Bedürfnisse anpassen können. Daraus ergeben sich Kontrollverluste und starke technologische Abhängigkeiten von einzelnen, großen Anbietern. Die Open Source Business Alliance (OSB Alliance) entwickelt nun mit dem Sovereign Cloud Stack (SCS) einen technischen Unterbau für Gaia-X, der vollständige digitale Souveränität ermöglicht.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/default-card.jpg" /><media:content medium="image" url="https://scs.community/assets/images/default-card.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Gedanken zur OVH T-Systems Zusammenarbeit</title><link href="https://scs.community/2020/09/15/garloff-ovh/" rel="alternate" type="text/html" title="Gedanken zur OVH T-Systems Zusammenarbeit" /><published>2020-09-15T00:00:00+00:00</published><updated>2022-01-31T10:07:20+00:00</updated><id>https://scs.community/2020/09/15/garloff-ovh</id><content type="html" xml:base="https://scs.community/2020/09/15/garloff-ovh/"><![CDATA[<p>SCS arbeitet als Arbeitspaket in GAIA-X erfolgreich gemeinsam mit
+vielen Firmen aus Industrie, ITK und öffentlichen Einrichtungen daran,
+einen gemeinsamen Stack für eine Cloud- und Containerplattform zu
+standardisieren und zu implementieren als Option für einen souveränen
+Unterbau für höherabstrahierte Dienste im GAIA-X Projekt. Für den
+Erfolg ist es wichtig, dass gemeinsam definierte Standards die heutige
+Fragmentierung des Marktes (jenseits der Hyperscaler) überwinden und
+somit eine gut etablierte Plattform geschaffen wird, die Kunden und
+Entwicklern die Möglichkeit gibt, Anbieter frei zu kombinieren und bei
+Bedarf auch zu wechseln.</p>
+
+<p>Zwei unserer SCS Partner, OVH und T-Systems International, haben
+gestern angekündigt, die Zusammenarbeit auch jenseits der gemeinsamen
+Entwicklung von SCS zu vertiefen und bei Hardware, Rechenzentren,
+Betrieb und Softwarestack eng zusammenzuarbeiten.</p>
+
+<p>Ich wurde gefragt, wie diese Ankündigung mit SCS zusammenpasst und
+habe mit beiden Partnern Kontakt aufgenommen um sicherzugehen, dass
+sie keine Änderung in der Zusammenarbeit im Rahmen von SCS bedeutet.
+Tut sie nicht.</p>
+
+<p>Ich will wirklich OVH und T-Systems zu diesem Abkommen gratulieren!
+Es ist gut, dass sie auch über die in GAIA-X abgedeckten Themen
+hinaus an einer Partnerschaft arbeiten. Es wird diesen beiden großen
+Anbietern helfen, Fahrt dabei aufzunehmen, SCS zu implementieren
+und damit eine echte offene Alternative im Markt zu etablieren.</p>]]></content><author><name>Kurt Garloff</name></author><summary type="html"><![CDATA[SCS arbeitet als Arbeitspaket in GAIA-X erfolgreich gemeinsam mit vielen Firmen aus Industrie, ITK und öffentlichen Einrichtungen daran, einen gemeinsamen Stack für eine Cloud- und Containerplattform zu standardisieren und zu implementieren als Option für einen souveränen Unterbau für höherabstrahierte Dienste im GAIA-X Projekt. Für den Erfolg ist es wichtig, dass gemeinsam definierte Standards die heutige Fragmentierung des Marktes (jenseits der Hyperscaler) überwinden und somit eine gut etablierte Plattform geschaffen wird, die Kunden und Entwicklern die Möglichkeit gibt, Anbieter frei zu kombinieren und bei Bedarf auch zu wechseln.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://scs.community/assets/images/default-card.jpg" /><media:content medium="image" url="https://scs.community/assets/images/default-card.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="SCS R1 released" />
+<meta name="author" content="Sovereign Cloud Stack" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="After R0 has been released in July and focused on the installation of a test environment, the release R1 of Sovereign Cloud Stack was released last Wednesday, 2021-09-29." />
+<meta property="og:description" content="After R0 has been released in July and focused on the installation of a test environment, the release R1 of Sovereign Cloud Stack was released last Wednesday, 2021-09-29." />
+<link rel="canonical" href="https://scs.community/release/2021/10/05/release1/" />
+<meta property="og:url" content="https://scs.community/release/2021/10/05/release1/" />
+<meta property="og:site_name" content="Sovereign Cloud Stack" />
+<meta property="og:image" content="https://scs.community/assets/images/default-card.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://scs.community/assets/images/default-card.jpg" />
+<meta property="twitter:title" content="SCS R1 released" />
+<meta name="twitter:site" content="@scs_osballiance" />
+<meta name="twitter:creator" content="@Sovereign Cloud Stack" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Sovereign Cloud Stack"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://scs.community/release/2021/10/05/release1/"},"description":"After R0 has been released in July and focused on the installation of a test environment, the release R1 of Sovereign Cloud Stack was released last Wednesday, 2021-09-29.","@type":"BlogPosting","image":"https://scs.community/assets/images/default-card.jpg","url":"https://scs.community/release/2021/10/05/release1/","headline":"SCS R1 released","dateModified":"2022-01-31T10:07:20+00:00","datePublished":"2021-10-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <title>SCS R1 released | Sovereign Cloud Stack</title>
+  <meta property="og:title" content="SCS R1 released | Sovereign Cloud Stack">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" color="#50c3a5" href="/safari-pinned-tab.svg" />
+  <meta name="msapplication-TileColor" content="#50c3a5">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
+  <div class="container">
+    <button
+      class="navbar-toggler me-auto"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        
+        <li class="nav-item">
+          
+            <a class="nav-link" href="/">
+              Home
+            </a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Discover SCS
+            </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  <li><a class="dropdown-item" href="/about/">About SCS</a></li>
+                
+                  <li><a class="dropdown-item" href="/use/">Use SCS</a></li>
+                
+                  <li><a class="dropdown-item" href="/community/">Our community</a></li>
+                
+            </ul>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+            <a class="nav-link" href="/news/">
+              News
+            </a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+            <a class="nav-link" href="/jobs/">
+              Open positions
+            </a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+            <a class="nav-link" href="/tenders/">
+              Public tenders
+            </a>
+          
+        </li>
+        
+      </ul>
+    </div>
+    <div>
+      <ul class="navbar-nav flex-row">
+        
+        <li class="nav-item my-auto mx-2 mx-lg-0">
+          <a class="nav-link" target="_blank" href="https://twitter.com/scs_osballiance">
+            <i class="fa fa-twitter fa-lg"></i>
+          </a>
+        </li>
+        
+        <li class="nav-item my-auto mx-2 mx-lg-0">
+          <a class="nav-link" target="_blank" href="https://www.linkedin.com/showcase/sovereigncloudstack">
+            <i class="fa fa-linkedin-square fa-lg"></i>
+          </a>
+        </li>
+        
+        <li class="nav-item my-auto mx-2 mx-lg-0">
+          <a class="nav-link" target="_blank" href="https://github.com/SovereignCloudStack">
+            <i class="fa fa-github fa-lg"></i>
+          </a>
+        </li>
+        
+        <li class="nav-item my-auto mx-2 mx-lg-0">
+          <a class="nav-link" target="_blank" href="https://matrix.to/#/!TiDqlLmEUaXqTemaLc:matrix.org?via=matrix.org">
+            <i class="fa fa-matrix-org fa-lg"></i>
+          </a>
+        </li>
+        
+        <li class="nav-item my-auto mx-2 mx-lg-0">
+          <a class="nav-link" target="_blank" href="https://scs.sovereignit.de/mailman3/postorius/lists/announce.lists.scs.community/">
+            <i class="fa fa-bullhorn"></i>
+          </a>
+        </li>
+        
+        <li class="nav-item my-auto mx-2 mx-lg-0">
+          <a class="nav-link" target="_blank" href="/feed.xml">
+            <i class="fa fa-rss"></i>
+          </a>
+        </li>
+        
+        <li class="nav-item my-auto ms-4 ms-lg-2">
+          <a class="nav-link fw-bold  text-decoration-underline  " href="/release/2021/10/05/release1/">EN</a>
+        </li>
+        <li class="nav-item my-auto mx-2 mx-lg-0">
+          <span class="nav-link px-0">/</span>
+        </li>
+        <li clas="nav-item my-auto">
+          <a class="nav-link fw-bold  " href="/de/release/2021/10/05/release1/">DE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <!-- Header -->
+<header class="bg-white py-2 mb-2">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-6 pe-lg-4">
+        <div class="mt-5 mb-3">
+           <img src="/assets/images/SCS_horizontal.svg" alt="Sovereign Cloud Stack" width="50%" class="img-fluid">  
+        </div>
+        <p class="lead text-black-50 mb-lg-3">
+          Sovereign Cloud Stack (SCS) is federated cloud technology built entirely with Open Source Software — putting users and providers in control.
+        </p>
+      </div>
+      <div class="col-lg-6 text-lg-end text-nowrap my-auto">
+        <a href="https://osb-alliance.com" target="_blank" class="text-decoration-none">
+          <img src="/assets/images/logo-osba.svg" alt="Open Source Business Alliance" width="25%" class="img-fluid">
+        </a>
+        <a href="https://bmwi.de" target="_blank" class="text-decoration-none">
+          <img src="/assets/images/logo-bmwi-funded.svg" alt="Bundesministerium für Wirtschaft und Energie" width="25%" class="img-fluid ms-5">
+        </a>
+        <a href="https://gaia-x.eu" target="_blank" class="text-decoration-none">
+          <img src="/assets/images/logo-gaiax.svg" alt="Gaia-X" width="30%" class="img-fluid ms-3">
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- Page Content -->
+  <div class="container mb-5">
+    <div class="d-flex w-100 flex-column mb-3">
+	<h1 class="pb-1 mb-0"><small>SCS R1 released</small></h1>
+	<div class="d-flex w-100 flex-row">
+		<div style="max-width: 80px; max-height: 80px;" class="rounded-3 overflow-hidden ratio ratio-1x1">
+			<img src="/assets/images/SCS_logo.png" class="img-fluid">
+		</div>
+		<div class="d-flex w-100 flex-column ms-3 my-auto">
+			<small class="mb-1 fw-bolder">Sovereign Cloud Stack</small>
+			<small>
+	October 05, 2021
+
+</small>
+		</div>
+	</div>
+</div>
+
+<p>After R0 has been released in July and focused on the installation of a <a href="https://docs.osism.tech/testbed/">test environment</a>, the release R1 of Sovereign Cloud Stack was released last Wednesday, 2021-09-29.</p>
+
+<p>The newest release R1 includes the <a href="https://releases.openstack.org/wallaby/">OpenStack Wallaby Release</a>, <a href="https://github.com/kubernetes/kubernetes/releases">Kubernetes version v1.21.x</a>, and the <a href="https://github.com/kubernetes-sigs/cluster-api/releases">Kubernetes Cluster API version v0.4</a>.</p>
+
+<p>The <a href="https://github.com/SovereignCloudStack/Docs/blob/main/Release-Notes/Release1.md">full release notes</a> including technical details can be found in the <a href="https://github.com/SovereignCloudStack/Docs">central docs repository</a> of the SCS project on GitHub.</p>
+
+<h2 id="kubernetes-cluster-as-self-service-thanks-to-cluster-api">Kubernetes cluster as self-service thanks to cluster API</h2>
+
+<p>A special focus during this sprint was on the management of Kubernetes containers based on the k8s Cluster API, which was integrated in version Alpha 4. Both through the conformance tests of the <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> using <a href="https://sonobuoy.io/">sonobouy</a>, and in real-world use during the <a href="https://www.gaia-x.eu/news/gaia-x-hackathon-1-new-technology-develops-live-today-and-tomorrow">first Gaia-X Hackathon</a> on August 30 and 31, 2021, the maturity of SCS’s k8s cluster management was tested and determined for productive systems.</p>
+
+<figure class="figure mx-auto d-block" style="width:90%">
+  <a href="/assets/images/release1/screenshot-capi-provisioning-k9s.png">
+    <img src="/assets/images/release1/screenshot-capi-provisioning-k9s.png" class="figure-img w-100" />
+  </a>
+    <figcaption class="figure-caption">
+    Kubernetes cluster can be deployed on-the-fly through the k8s cluster API.
+  </figcaption>
+</figure>
+
+<p>With the Kubernetes Cluster API, DevOps teams can create and manage Kubernetes clusters for development, for test and staging, and for production environments on-thy-fly. Of course, the cloud operator can also offer a managed service to its users via the same technology. Detailed <a href="https://github.com/SovereignCloudStack/k8s-cluster-api-provider/blob/master/Release-Notes-R1.md">release information on SCS’s k8s-cluster-api-provider</a> can be found in the <a href="https://github.com/SovereignCloudStack/k8s-cluster-api-provider">corresponding repository</a>.</p>
+
+<h2 id="sovereign-operation-through-monitoring-and-logging">Sovereign operation through monitoring and logging</h2>
+
+<p>The Sovereign Cloud Stack project’s Monitoring Special Interest Group has collected <a href="https://github.com/osism/kolla-operations">various examples of monitoring SCS environments</a>. The blueprints for Prometheus exporter, rules and Grafana dashboards can be used by providers after appropriate customization to ensure low-threshold, high-quality operation of their own SCS platform.</p>
+
+<figure class="figure mx-auto d-block" style="width:90%">
+  <a href="/assets/images/release1/screenshot-ceph-dashboard.png">
+    <img src="/assets/images/release1/screenshot-ceph-dashboard.png" class="figure-img w-100" />
+  </a>
+    <figcaption class="figure-caption">
+    With R1, easy-to-use dashboards are available.
+  </figcaption>
+</figure>
+
+<p>For the upcoming release, we plan to integrate these blueprints directly into the testbed deployment and also make them available to the OpenStack upstream community. We particularly welcome feedback on the examples integrated in release R1 and, in addition, suggestions on other essential operational tools.</p>
+
+<p>With the current version of OSISM in release R1, centralized logging is now also enabled by default. The logging rules still have to be adapted by the provider according to his environment. Similar to monitoring, we also plan to publish already tested rules in the area of logging as a blueprint with the upcoming releases.</p>
+
+<h2 id="a-federated-and-secure-data-platform">A federated and secure data platform</h2>
+
+<p>Authentication against Horizon, the OpenStack standard web interface for using an SCS Cloud, can additionally be realized with <a href="https://openid.net/connect/">OpenID Connect</a> via the integrated identity and access management solution Keycloak. This enables federation across multiple cloud service providers, in line with the vision of Gaia-X.</p>
+
+<p>For the following release R2, we plan to work further on the high availability of the IAM service, which could not be fully tested at the time of the release in its current implementation based on Galera Cluster.</p>
+
+<h2 id="automated-distribution-on-bare-metal">Automated distribution on bare metal</h2>
+
+<p>For automated distribution of the Sovereign Cloud stack on physical hardware, the <a href="https://ironicbaremetal.org/">ironic</a> service can be installed using OSISM. To enable prior testing of the automated deployment, a virtual BMC service has been integrated, so that bare metal deployments can also be tested in the testbed. The main building blocks are already available upstream, but were not fully integrated into R1 due to the short timing of the release.</p>
+
+<h2 id="further-announcements-about-the-project">Further announcements about the project</h2>
+
+<p>Following the successful engagement of the SCS community in the first Gaia-X Hackathon, concrete plans are already being made for the second Hackathon on December 2 and 3, 2021. This will feature a dedicated two-day session in which a fully sovereign cloud will be built from scratch. Interested cloud architects are invited to join us in installing and running SCS hands-on on real hardware.</p>
+
+<p><img src="/assets/images/logo-greencis.png" class="float-left" alt="GREEN-CIS" style="width:300px;" /></p>
+
+<p>In addition, as part of the “Important Project of Common European Interest - Cloud Infrastructure and Services” (IPCEI-CIS), the SCS project is actively participating in the so-called GREEN-CIS consortium, short for “General Purpose Resilient and Secure Energy Efficient Computing Infrastructure Network”. This growing alliance of a total of 28 industry and research partners has set itself the goal of developing and building a virtual, sustainable cloud edge system operating as a single entity based on a decentralized, multi-provider ecosystem. In this regard, we are pleased to receive positive feedback from the German Federal Ministry for Economic Affairs and Energy, which will send the GREEN-CIS consortium together with 21 other projects to the European matchmaking event on October 06, 2021.</p>
+
+<p>The Sovereign Cloud Stack project will play a central role as an open and sovereign cloud technology and will serve as the basis for further platform services as well as for a modern edge cloud.</p>
+
+
+  </div>
+  <!-- /.container -->
+  <!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container text-light bg-dark">
+    <div class="row">
+      <div class="col-lg-5">
+        <a href="#" class="footer-site-logo">
+          <img src="/assets/images/SCS_short.svg" alt="Sovereign Cloud Stack" class="img-fluid mb-2">
+        </a>
+        <p class="small my-1">Sovereign Cloud Stack, SCS and the logo are registered trademarks of the Open Source Business Alliance e.V. — Other trademarks are property of their respective owners.</p>
+        <ul class="list-inline mt-2 mb-1">
+          
+          <li class="list-inline-item small me-sm-4 me-3">
+            <i class="text-light fa fa-phone me-1"></i> <a class="text-light text-decoration-none" href="tel:+49-30-300149-3377" title="+49-30-300149-3377">+49-30-300149-3377</a>
+          </li>
+          
+          <li class="list-inline-item small me-sm-4 me-3">
+            <i class="text-light fa fa-envelope me-1"></i> <a class="text-light text-decoration-none" href="mailto:project@scs.sovereignit.de" title="project[at]scs.sovereignit.de">project[at]scs.sovereignit.de</a>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <ul class="list-inline text-lg-end mt-1 mb-1">
+          
+          <li class="list-inline-item me-2">
+            <span class="fa-stack fa-lg">
+            <a target="_blank" href="https://twitter.com/scs_osballiance">
+              <i class="text-gray fa fa-square fa-stack-2x"></i>
+              <i class="text-white fa fa-twitter fa-lg fa-stack-1x"></i>
+            </a>
+            </span>
+          </li>
+          
+          <li class="list-inline-item me-2">
+            <span class="fa-stack fa-lg">
+            <a target="_blank" href="https://www.linkedin.com/showcase/sovereigncloudstack">
+              <i class="text-gray fa fa-square fa-stack-2x"></i>
+              <i class="text-white fa fa-linkedin-square fa-lg fa-stack-1x"></i>
+            </a>
+            </span>
+          </li>
+          
+          <li class="list-inline-item me-2">
+            <span class="fa-stack fa-lg">
+            <a target="_blank" href="https://github.com/SovereignCloudStack">
+              <i class="text-gray fa fa-square fa-stack-2x"></i>
+              <i class="text-white fa fa-github fa-lg fa-stack-1x"></i>
+            </a>
+            </span>
+          </li>
+          
+          <li class="list-inline-item me-2">
+            <span class="fa-stack fa-lg">
+            <a target="_blank" href="https://matrix.to/#/!TiDqlLmEUaXqTemaLc:matrix.org?via=matrix.org">
+              <i class="text-gray fa fa-square fa-stack-2x"></i>
+              <i class="text-white fa fa-matrix-org fa-lg fa-stack-1x"></i>
+            </a>
+            </span>
+          </li>
+          
+          <li class="list-inline-item me-2">
+            <span class="fa-stack fa-lg">
+            <a target="_blank" href="https://scs.sovereignit.de/mailman3/postorius/lists/announce.lists.scs.community/">
+              <i class="text-gray fa fa-square fa-stack-2x"></i>
+              <i class="text-white fa fa-bullhorn fa-stack-1x"></i>
+            </a>
+            </span>
+          </li>
+          
+          <li class="list-inline-item me-2">
+            <span class="fa-stack fa-lg">
+            <a target="_blank" href="/feed.xml">
+              <i class="text-gray fa fa-square fa-stack-2x"></i>
+              <i class="text-white fa fa-rss fa-stack-1x"></i>
+            </a>
+            </span>
+          </li>
+          
+        </ul>
+        <ul class="list-inline text-lg-end mt-2">
+          
+          <li class="list-inline-item me-2 ms-lg-2">
+            <a class="text-light text-decoration-none" title="Imprint" href="/imprint/">Imprint</a>
+          </li>
+          
+          <li class="list-inline-item me-2 ms-lg-2">
+            <a class="text-light text-decoration-none" title="Data Protection Statement" href="/dataprotection/">Data Protection Statement</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</footer>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Lighbox -->
+  <script type="text/javascript" src="/assets/vendor/lightbox.js"></script>
+  <link rel="stylesheet" href="/assets/css/lightbox.css">
+</body>
+
+</html>
